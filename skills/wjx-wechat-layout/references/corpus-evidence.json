@@ -1,0 +1,2755 @@
+{
+  "count": 100,
+  "account": "东南大学吴健雄学院",
+  "collected": "2026-10-18",
+  "outer_font_frequency": {
+    "16px": 45,
+    "14px": 53,
+    "15px": 2
+  },
+  "effective_text_size_weighted_by_characters": {
+    "16px": 2691,
+    "14px": 201311,
+    "20px": 104,
+    "12px": 4682,
+    "11px": 293,
+    "13px": 444,
+    "15px": 1307,
+    "19px": 8,
+    "18px": 421,
+    "24px": 310,
+    "17px": 192,
+    "1px": 0,
+    "21px": 16,
+    "56px": 6,
+    "10px": 49,
+    "0px": 0,
+    "2px": 0,
+    "30px": 29,
+    "33px": 0,
+    "22px": 6
+  },
+  "samples": [
+    {
+      "title": "重磅 | 《东南大学吴健雄学院学术导师手册》正式发布！",
+      "url": "https://mp.weixin.qq.com/s/TsfqiOI0r0y69Y9e6aqB9w",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          641
+        ],
+        [
+          "12px",
+          44
+        ],
+        [
+          "20px",
+          6
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "学院新闻",
+      "subtype": "制度发布",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "活动招募 | 五校书院际交流·南京站即将盛大开启",
+      "url": "https://mp.weixin.qq.com/s/dOraHrAWr_YRPpIQU_h1EA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1586
+        ],
+        [
+          "12px",
+          39
+        ],
+        [
+          "16px",
+          2
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "活动招募",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "人文讲座 | 东南大学首席教授吕俊鹏精彩演讲“一粒沙中看世界：从诺贝尔奖看半导体与集成电路的发展”",
+      "url": "https://mp.weixin.qq.com/s/iqYOyB1S1HmC8lPehGv3pg",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1296
+        ],
+        [
+          "13px",
+          112
+        ],
+        [
+          "12px",
+          41
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "人文讲座",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第200期如约而至，聆听指引，笃行致远！",
+      "url": "https://mp.weixin.qq.com/s/Ennkx4f4SRsy22UwT06tnA",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2938
+        ],
+        [
+          "16px",
+          41
+        ],
+        [
+          "24px",
+          27
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "党建进社区｜吴健雄学院开展“五彩童心・红韵同行” 主题校社共建活动",
+      "url": "https://mp.weixin.qq.com/s/695Xzukr7E7hwD_da8PStA",
+      "outer_style": {
+        "background-color": "rgb(253, 248, 235)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1487
+        ],
+        [
+          "12px",
+          68
+        ],
+        [
+          "16px",
+          45
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "剑桥问学 | 吴健雄学院剑桥夏季研学圆满收官",
+      "url": "https://mp.weixin.qq.com/s/6_xUw-LQGSWNnxBJGclXXg",
+      "outer_style": {
+        "background-color": "rgb(242, 249, 255)",
+        "letter-spacing": "1px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3051
+        ],
+        [
+          "16px",
+          202
+        ],
+        [
+          "12px",
+          66
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "竞赛日历 | 十月竞赛一站式汇总",
+      "url": "https://mp.weixin.qq.com/s/g09FbNf95bqMLS6fAlptxw",
+      "outer_style": {
+        "background-color": "rgb(236, 247, 253)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2322
+        ],
+        [
+          "16px",
+          198
+        ],
+        [
+          "15px",
+          128
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "竞赛日历",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "校友动态 | 王霄峻教授牵头项目荣获2024年度江苏省科技进步奖",
+      "url": "https://mp.weixin.qq.com/s/QwfagUG0ukTKLj_6AB6m3A",
+      "outer_style": {
+        "background-color": "rgb(244, 246, 255)",
+        "letter-spacing": "1px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1656
+        ],
+        [
+          "15px",
+          64
+        ],
+        [
+          "12px",
+          50
+        ]
+      ],
+      "source_column": "校友动态",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递｜吴健雄学院项目获江苏大学生创新大赛一等奖",
+      "url": "https://mp.weixin.qq.com/s/sLMn4i0EW8Ugn6_cNlXRPg",
+      "outer_style": {
+        "font-size": "14px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1722
+        ],
+        [
+          "12px",
+          40
+        ],
+        [
+          "16px",
+          8
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "科创竞赛",
+      "subtype": "竞赛成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "人文讲座 | 东南大学青年特聘教授冯伟精彩演讲“弈理人间 —— 博弈论漫谈”",
+      "url": "https://mp.weixin.qq.com/s/WCyHCt0rUNslwFtmj3j21A",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          795
+        ],
+        [
+          "13px",
+          115
+        ],
+        [
+          "12px",
+          25
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "人文讲座",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第199期如约而至，以问促学，聚力成长！",
+      "url": "https://mp.weixin.qq.com/s/rQ1bzd1z_UvWwmk3rfrDNg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2698
+        ],
+        [
+          "16px",
+          26
+        ],
+        [
+          "12px",
+          25
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "铭记烽火岁月，赓续铁军精神 —— 吴健雄学院师生赴高淳开展主题党日活动",
+      "url": "https://mp.weixin.qq.com/s/hEEvGxr3TSTKJ7PzWTcXWg",
+      "outer_style": {
+        "line-height": "1.6",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          878
+        ],
+        [
+          "11px",
+          44
+        ],
+        [
+          "16px",
+          28
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "主题党日",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "知行致远 | 亚琛课堂求索智能工厂，行路邂逅欧洲人文底蕴",
+      "url": "https://mp.weixin.qq.com/s/oNufWmXzp3wA9pyrHrYeVA",
+      "outer_style": {
+        "background-color": "rgb(242, 249, 255)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3143
+        ],
+        [
+          "12px",
+          68
+        ],
+        [
+          "18px",
+          20
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "答辩风采｜2026年校级SRTP项目结题验收暨国省创项目中期检查答辩圆满举行",
+      "url": "https://mp.weixin.qq.com/s/8E4oxm5X4eL8B8eYaYBSKA",
+      "outer_style": {
+        "background-color": "rgb(243, 249, 252)",
+        "font-size": "14px",
+        "color": "rgb(51, 51, 56)",
+        "letter-spacing": "1px",
+        "padding": "0px 10px"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2060
+        ],
+        [
+          "12px",
+          67
+        ],
+        [
+          "16px",
+          35
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "项目答辩",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "对话校友 | 杰出校友禹业栋为吴院学子解锁学业规划与职业发展新思路",
+      "url": "https://mp.weixin.qq.com/s/iQZeSclbboNUuiVsXGSGlw",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2858
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "16px",
+          0
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "校友动态 | 我院两位校友杜源、唐万恺入选2026年度江苏省杰出青年基金拟立项目",
+      "url": "https://mp.weixin.qq.com/s/-2meq7J1eUfT5BP4bZUEtg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          807
+        ],
+        [
+          "12px",
+          38
+        ],
+        [
+          "16px",
+          0
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "书院公告 | 关于中秋、国庆假期健雄书院闭馆的公告",
+      "url": "https://mp.weixin.qq.com/s/_0PHpw4J_VSgWNKBpQHHQw",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          224
+        ],
+        [
+          "12px",
+          16
+        ],
+        [
+          "18px",
+          6
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "开放安排",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄书院师生赴长沙参加“岳麓书院学友计划”全国高校书院跨学科育人活动",
+      "url": "https://mp.weixin.qq.com/s/iUOFRxSz2-6HGFrwpl_O0w",
+      "outer_style": {
+        "font-size": "14px",
+        "padding": "0px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1870
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "18px",
+          11
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "书院互访",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第198期如约而至，在交流中学习，在讨论中成长！",
+      "url": "https://mp.weixin.qq.com/s/1C3qG2SV_9Y9OEfvfypTkQ",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2100
+        ],
+        [
+          "16px",
+          26
+        ],
+        [
+          "12px",
+          25
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "706公里！吴院新生缪轩骑行上大学！",
+      "url": "https://mp.weixin.qq.com/s/0nvt-zTc23KqdqvTwDnaYw",
+      "outer_style": {
+        "background-color": "rgb(252, 248, 238)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1496
+        ],
+        [
+          "12px",
+          49
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "新生故事",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "薪火相传 | 学院第二届“雨花英烈事迹与精神”红色微课展评活动顺利开展",
+      "url": "https://mp.weixin.qq.com/s/UDf6-TcyH0cgIkwrr7Zn0g",
+      "outer_style": {
+        "background-color": "rgb(254, 250, 248)",
+        "font-size": "14px",
+        "line-height": "2",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1098
+        ],
+        [
+          "12px",
+          49
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "平安启航 | 2026年我院圆满开展暑期国际交流行前培训会",
+      "url": "https://mp.weixin.qq.com/s/g2WkskV4uI1N0pDbfr3blg",
+      "outer_style": {
+        "background-color": "rgb(248, 248, 248)",
+        "letter-spacing": "1px",
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          982
+        ],
+        [
+          "12px",
+          43
+        ],
+        [
+          "16px",
+          5
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "行前培训",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递｜吴院学子在第二十一届全国大学生智能汽车竞赛（华东赛区）中斩获佳绩",
+      "url": "https://mp.weixin.qq.com/s/moTOusV1_6JlI6z3hSKv3w",
+      "outer_style": {
+        "background-color": "rgb(246, 252, 255)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1253
+        ],
+        [
+          "12px",
+          127
+        ],
+        [
+          "18px",
+          15
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "竞赛成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄群星，闪耀此时 | 吴健雄学院 2025-2026 学年国家奖学金、校长奖学金评审答辩顺利举行",
+      "url": "https://mp.weixin.qq.com/s/YzcNgzxpWFTrkQ2U6txsJw",
+      "outer_style": {
+        "font-size": "15px",
+        "letter-spacing": "1px",
+        "line-height": "1.7",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2338
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "15px",
+          0
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "学院新闻",
+      "subtype": "育人工作",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄书院第18期荣誉志愿者招募令",
+      "url": "https://mp.weixin.qq.com/s/Ok4Y91CLtZWUjTuuhTMhmg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1167
+        ],
+        [
+          "16px",
+          94
+        ],
+        [
+          "17px",
+          71
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "活动招募",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "蔡朝东先生为东大师生讲授信念与责任",
+      "url": "https://mp.weixin.qq.com/s/Ufgr7r2sQhHVCPPVTzwsdg",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2174
+        ],
+        [
+          "12px",
+          42
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "人文讲座",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第197期如约而至，在交流中学习，在讨论中成长！",
+      "url": "https://mp.weixin.qq.com/s/4D81pl3BUzkE9FWlTPPlYw",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2425
+        ],
+        [
+          "24px",
+          27
+        ],
+        [
+          "16px",
+          26
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "三育人风采 | 胡辰璐：做学生成长路上的“兜底者”",
+      "url": "https://mp.weixin.qq.com/s/CeSmpMHOGhJom-Mv2hkBcg",
+      "outer_style": {
+        "font-size": "14px",
+        "color": "rgb(0, 0, 0)",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2005
+        ],
+        [
+          "16px",
+          89
+        ],
+        [
+          "12px",
+          28
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "师者风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "康桥逐光｜吴健雄学院剑桥冬季学术项目圆满收官",
+      "url": "https://mp.weixin.qq.com/s/D-DKlW7Tt070k04yGl7VfA",
+      "outer_style": {
+        "background-color": "rgb(250, 253, 255)",
+        "font-size": "14px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3295
+        ],
+        [
+          "16px",
+          77
+        ],
+        [
+          "15px",
+          77
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院学生科创指导委员会助力拔尖创新人才培养",
+      "url": "https://mp.weixin.qq.com/s/fmkOtjXtQMdcgPgDb56wJA",
+      "outer_style": {
+        "padding": "0px 10px",
+        "letter-spacing": "1px",
+        "font-size": "14px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1332
+        ],
+        [
+          "12px",
+          35
+        ],
+        [
+          "16px",
+          34
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "科创育人",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "餐叙话成长 暖心伴前行 —— 吴健雄学院举办2025级少年生院长午餐会",
+      "url": "https://mp.weixin.qq.com/s/jpwq4BznhcjnANrIbwoOyw",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1392
+        ],
+        [
+          "12px",
+          42
+        ],
+        [
+          "16px",
+          0
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "学院新闻",
+      "subtype": "育人工作",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健行启航·领军未来 | 吴健雄学院2026级新生集训营圆满举行",
+      "url": "https://mp.weixin.qq.com/s/ILGHzToULH-zWE0W3fHoew",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2946
+        ],
+        [
+          "12px",
+          92
+        ],
+        [
+          "56px",
+          6
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "学院新闻",
+      "subtype": "育人工作",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "东南大学2026级吴健雄登峰班二次选拔公告",
+      "url": "https://mp.weixin.qq.com/s/JVogNcBN8ierFPkt1AGd5g",
+      "outer_style": {
+        "background-color": "rgb(246, 252, 255)",
+        "font-size": "15px",
+        "line-height": "1.8",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1323
+        ],
+        [
+          "12px",
+          47
+        ],
+        [
+          "16px",
+          16
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "招生选拔",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄书院第19期荣誉志愿者招募令",
+      "url": "https://mp.weixin.qq.com/s/yfIVWtyWBNgCknag1CcEvg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1169
+        ],
+        [
+          "16px",
+          94
+        ],
+        [
+          "17px",
+          71
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "通知公告",
+      "subtype": "活动招募",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第196期如约而至，让思想在交流中熠熠生辉",
+      "url": "https://mp.weixin.qq.com/s/nPT08e6UtIIPHMIlg-4Y1w",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3397
+        ],
+        [
+          "16px",
+          32
+        ],
+        [
+          "24px",
+          27
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄学子 | 夏湘波：打碎量尺，举起火把",
+      "url": "https://mp.weixin.qq.com/s/YG1NUjaR2inOqHFUJj0XNQ",
+      "outer_style": {
+        "line-height": "1.6",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1318
+        ],
+        [
+          "15px",
+          53
+        ],
+        [
+          "12px",
+          35
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "健雄学子",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "文物“开口说话” | “红迹新声”实践团走好红色传播之路",
+      "url": "https://mp.weixin.qq.com/s/WDMriVccTsJnOKmn8UXVzQ",
+      "outer_style": {
+        "background-color": "rgb(254, 250, 248)",
+        "font-size": "14px",
+        "line-height": "1.6",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2316
+        ],
+        [
+          "12px",
+          150
+        ],
+        [
+          "16px",
+          8
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "再赴亚琛 | 触摸工业4.0脉搏，感知智能制造未来",
+      "url": "https://mp.weixin.qq.com/s/xUASj637CvVTLDrLqm_Tmw",
+      "outer_style": {
+        "background-color": "rgb(255, 250, 243)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3418
+        ],
+        [
+          "15px",
+          64
+        ],
+        [
+          "12px",
+          45
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递｜吴院学子在第九届全国大学生嵌入式芯片与系统设计竞赛中再创佳绩",
+      "url": "https://mp.weixin.qq.com/s/DiCJ2rnRPfcrhFLaU3Mc_Q",
+      "outer_style": {
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1061
+        ],
+        [
+          "12px",
+          57
+        ],
+        [
+          "16px",
+          21
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "竞赛成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "对话校友 | 优秀校友申怡飞与少年生共话成长之路",
+      "url": "https://mp.weixin.qq.com/s/Ca23rhkk8Gk8hxfxCNd0xg",
+      "outer_style": {
+        "background-color": "rgb(255, 247, 233)",
+        "font-size": "14px",
+        "padding": "0px 10px",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2080
+        ],
+        [
+          "16px",
+          78
+        ],
+        [
+          "12px",
+          42
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "新起点 | 吴健雄学院管理团队新成员风采展示",
+      "url": "https://mp.weixin.qq.com/s/qUQ6eaGVIRkAvRSbVgikMA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3598
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "15px",
+          39
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "人物风采",
+      "subtype": "团队风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院2026年暑期值班安排",
+      "url": "https://mp.weixin.qq.com/s/Tz2SeIh5h1q8SjtbqYwx-g",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 5px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          264
+        ],
+        [
+          "12px",
+          34
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "值班通知",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "人文讲座 | 全球社会教育家论坛联席主席蔡朝东精彩演讲“信念与责任 —— 奋进新征程，建功新时代”",
+      "url": "https://mp.weixin.qq.com/s/mx_l37C_VF0Nnsn7EiOLhQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1131
+        ],
+        [
+          "13px",
+          170
+        ],
+        [
+          "12px",
+          25
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "人文讲座",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第195期听师者一席话，探学问万重山",
+      "url": "https://mp.weixin.qq.com/s/Ruzwpt0D3jNU9ZDtKgu8PQ",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2833
+        ],
+        [
+          "16px",
+          32
+        ],
+        [
+          "24px",
+          24
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄学子 | 罗丽：人生马拉松，精不精彩在我爱",
+      "url": "https://mp.weixin.qq.com/s/Jo2uvW2SWqs_XvmXLoKsdA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1881
+        ],
+        [
+          "16px",
+          115
+        ],
+        [
+          "12px",
+          82
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "健雄学子",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "学院举行新发展党员入党宣誓仪式 （附名单）",
+      "url": "https://mp.weixin.qq.com/s/cG5cVJIeo0La1EyjSyEDag",
+      "outer_style": {
+        "background-color": "rgb(254, 250, 248)",
+        "font-size": "14px",
+        "line-height": "2",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3118
+        ],
+        [
+          "12px",
+          44
+        ],
+        [
+          "16px",
+          14
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "组织建设",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院2026年寒假国际交流行前培训成功举办",
+      "url": "https://mp.weixin.qq.com/s/7ziYGQBevUwL-NtyUzU0dg",
+      "outer_style": {
+        "background-color": "rgb(248, 248, 248)",
+        "letter-spacing": "1px",
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          662
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "16px",
+          5
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "行前培训",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 吴院学子在2026年全国大学生物联网设计竞赛中斩获多个国省级奖项",
+      "url": "https://mp.weixin.qq.com/s/xVU8i1kgCzn4sifOvQSj6g",
+      "outer_style": {
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1040
+        ],
+        [
+          "16px",
+          50
+        ],
+        [
+          "12px",
+          35
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "竞赛成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "共启未来 | 吴健雄学院校友发展论坛成功举办",
+      "url": "https://mp.weixin.qq.com/s/lIT1SqLjeI7VLSU3iHqHdw",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2596
+        ],
+        [
+          "12px",
+          34
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 吴健雄学院2023级本科生李天翔、杨聿让论文被2026年IEEE全球通信大会（GLOBECOM 2026）录用",
+      "url": "https://mp.weixin.qq.com/s/TeR-WGgY8ne3_RbouR6fuQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2348
+        ],
+        [
+          "12px",
+          119
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "科创竞赛",
+      "subtype": "论文成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "招募 | 找寻优雅的健雄书院钢琴师",
+      "url": "https://mp.weixin.qq.com/s/JOaTo5iSdqFxIKKmLtdROg",
+      "outer_style": {
+        "background-color": "rgb(250, 248, 241)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          557
+        ],
+        [
+          "12px",
+          33
+        ],
+        [
+          "18px",
+          10
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "通知公告",
+      "subtype": "活动招募",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第194期如约而至，让思想在交流中熠熠生辉",
+      "url": "https://mp.weixin.qq.com/s/rlnz7OqDaBhhegaAAK6NgQ",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3224
+        ],
+        [
+          "24px",
+          30
+        ],
+        [
+          "16px",
+          26
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院开展政绩观教育专题纪律党课",
+      "url": "https://mp.weixin.qq.com/s/2wcUyfzomMDn5JjFlFk7AA",
+      "outer_style": {
+        "background-color": "rgb(254, 250, 248)",
+        "font-size": "14px",
+        "line-height": "2",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          866
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "24px",
+          18
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "理论学习",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "遇见亚琛 | 一场关于Python编程与多元文化的国际之旅",
+      "url": "https://mp.weixin.qq.com/s/d7pBR9xBoOpgLRtKM96AOw",
+      "outer_style": {
+        "background-color": "rgb(212, 239, 253)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "2",
+        "padding": "0px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2758
+        ],
+        [
+          "12px",
+          33
+        ],
+        [
+          "20px",
+          24
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递｜吴院学子在2026年江苏省大学生电子设计竞赛中斩获佳绩",
+      "url": "https://mp.weixin.qq.com/s/PTBwsINWiWE6Uk5CEDKYmA",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2621
+        ],
+        [
+          "12px",
+          109
+        ],
+        [
+          "16px",
+          14
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "竞赛成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "校友动态 | 洪非凡学长荣获IEEE固态电路学会学生旅行补助金奖",
+      "url": "https://mp.weixin.qq.com/s/SvRt23sm_u7csrINeNkr0Q",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1576
+        ],
+        [
+          "12px",
+          31
+        ],
+        [
+          "16px",
+          12
+        ]
+      ],
+      "source_column": "校友动态",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "九龙湖畔的夏日邀约 —— 致每一位吴院校友的家书",
+      "url": "https://mp.weixin.qq.com/s/DM6uNnSgymV_8O0K0fxjjQ",
+      "outer_style": {
+        "font-size": "14px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1110
+        ],
+        [
+          "12px",
+          38
+        ],
+        [
+          "16px",
+          24
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "高端阵容 | 吴健雄学院2026级班团班主任隆重登场！",
+      "url": "https://mp.weixin.qq.com/s/nshP8yMluAuskUHkVYqZag",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2875
+        ],
+        [
+          "18px",
+          114
+        ],
+        [
+          "16px",
+          77
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "人物风采",
+      "subtype": "团队风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "年度大典 | 吴健雄学院2026年本科生毕业典礼22日下午隆重举行（附直播链接）",
+      "url": "https://mp.weixin.qq.com/s/uabsuG4BeMSvdB81mQZHiQ",
+      "outer_style": {
+        "background-color": "rgb(255, 251, 230)",
+        "line-height": "1.6",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3095
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "18px",
+          27
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "活动预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "新气象 | 健雄书院第七届学生管理团队风采展示",
+      "url": "https://mp.weixin.qq.com/s/o8yz715VyPtm73yyig1fCQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 15px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3901
+        ],
+        [
+          "15px",
+          42
+        ],
+        [
+          "12px",
+          29
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "人物风采",
+      "subtype": "团队风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第193期如约而至，在交流中保持奋进姿态",
+      "url": "https://mp.weixin.qq.com/s/UJARaKjtSlT2r_zkOQFYIg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3002
+        ],
+        [
+          "16px",
+          32
+        ],
+        [
+          "24px",
+          27
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄学子 | 李双霈：前路漫漫，上下求索",
+      "url": "https://mp.weixin.qq.com/s/-HqvuFyIsBL4Z4cWyHx5tQ",
+      "outer_style": {
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          993
+        ],
+        [
+          "15px",
+          49
+        ],
+        [
+          "12px",
+          34
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "健雄学子",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院举办首届 “雨花英烈事迹与精神” 主题宣讲活动",
+      "url": "https://mp.weixin.qq.com/s/xJI-dFBF1DzvN4HetLUV5g",
+      "outer_style": {
+        "background-color": "rgb(254, 250, 248)",
+        "font-size": "14px",
+        "line-height": "2",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2256
+        ],
+        [
+          "12px",
+          42
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "收获成长 | 在德国亚琛工业大学智慧工厂项目中领略学术人文",
+      "url": "https://mp.weixin.qq.com/s/J4syi8gn4qqXriZ0KnWC9g",
+      "outer_style": {
+        "background-color": "rgb(250, 246, 237)",
+        "font-size": "14px",
+        "line-height": "1.8",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2727
+        ],
+        [
+          "18px",
+          31
+        ],
+        [
+          "16px",
+          19
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 吴健雄学院2022级本科生黄欣宜、阴晓晖论文被IEEE全球通信大会（GLOBECOM）录用",
+      "url": "https://mp.weixin.qq.com/s/txXSQO-iWI-TlbVD_hc3rA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2507
+        ],
+        [
+          "12px",
+          255
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "论文成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "校友动态 | 司翀杰学长的ACM计算机视觉入门书正式出版",
+      "url": "https://mp.weixin.qq.com/s/9l-eLFa0CdxH0yDocvqZpQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1925
+        ],
+        [
+          "12px",
+          25
+        ],
+        [
+          "16px",
+          20
+        ]
+      ],
+      "source_column": "校友动态",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "特邀分享 | 杰出院友叶浩与吴院学子共话科研心路",
+      "url": "https://mp.weixin.qq.com/s/vK68AnPb7cqRoLtA26LyNg",
+      "outer_style": {
+        "font-size": "14px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1684
+        ],
+        [
+          "12px",
+          31
+        ],
+        [
+          "16px",
+          4
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-reviewed"
+    },
+    {
+      "title": "书院公告 | 关于近期健雄书院开放时间调整的公告",
+      "url": "https://mp.weixin.qq.com/s/O7UTeH0IUtRLUOmNRnREug",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          202
+        ],
+        [
+          "12px",
+          16
+        ],
+        [
+          "18px",
+          6
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "开放安排",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "寻脉川蜀 | 走进百年川大，踏访天府文脉体悟巴蜀风华",
+      "url": "https://mp.weixin.qq.com/s/Dldp_k5v14LWowZ06MkW7Q",
+      "outer_style": {
+        "background-color": "rgb(247, 250, 250)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2423
+        ],
+        [
+          "16px",
+          67
+        ],
+        [
+          "12px",
+          54
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "书院互访",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第192期如约而至，在交流中开拓视野",
+      "url": "https://mp.weixin.qq.com/s/Sun1YpG-O4nP9XRGPgYurg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2775
+        ],
+        [
+          "24px",
+          34
+        ],
+        [
+          "16px",
+          29
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "喜报｜吴健雄学院副院长梁乐教授荣获东南大学“至善宣传奖”",
+      "url": "https://mp.weixin.qq.com/s/93hYeWN-J4Tv59PUWLCTPA",
+      "outer_style": {
+        "font-size": "14px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1242
+        ],
+        [
+          "15px",
+          67
+        ],
+        [
+          "12px",
+          44
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "人物荣誉",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "走进红色梅园，吴健雄学院师生党员研学忆初心",
+      "url": "https://mp.weixin.qq.com/s/Sr32PRx5ErdBzO98aUYOoA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1889
+        ],
+        [
+          "12px",
+          34
+        ],
+        [
+          "15px",
+          32
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "东南大学吴健雄学院学子赴英国剑桥大学交流学习",
+      "url": "https://mp.weixin.qq.com/s/R4l-BaAdikWm24zpj5u5mw",
+      "outer_style": {
+        "padding": "0px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1696
+        ],
+        [
+          "16px",
+          183
+        ],
+        [
+          "13px",
+          42
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 吴健雄学院2022级本科生黄子昱论文被通信领域权威期刊录用",
+      "url": "https://mp.weixin.qq.com/s/19_0n1yy4UUrxFMeyK9Wag",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2355
+        ],
+        [
+          "12px",
+          42
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "论文成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "校友动态 | 黄灵莹学姐以青年首席教授身份入职东南大学",
+      "url": "https://mp.weixin.qq.com/s/B0AmFg9DR6ec8EvqAgKgeQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1273
+        ],
+        [
+          "12px",
+          24
+        ],
+        [
+          "16px",
+          12
+        ]
+      ],
+      "source_column": "校友动态",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "十年之约｜吴院2010级本科生校友毕业十周年返校活动圆满举行",
+      "url": "https://mp.weixin.qq.com/s/3puaQM6AifVpmjeiyFbUBA",
+      "outer_style": {
+        "font-size": "14px",
+        "padding": "0px 10px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1888
+        ],
+        [
+          "12px",
+          32
+        ],
+        [
+          "20px",
+          1
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "月满情浓 | 吴院开展中秋送月饼慰问新生活动",
+      "url": "https://mp.weixin.qq.com/s/2YJKm3hueHSycKvdbv_sig",
+      "outer_style": {
+        "background-color": "rgb(254, 249, 242)",
+        "font-size": "14px",
+        "line-height": "1.6",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          890
+        ],
+        [
+          "12px",
+          57
+        ],
+        [
+          "15px",
+          28
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "学院新闻",
+      "subtype": "育人工作",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "书院公告 | 关于五一假期健雄书院闭馆的公告",
+      "url": "https://mp.weixin.qq.com/s/akkHLbOg6JViaBMQhnlqbQ",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          138
+        ],
+        [
+          "18px",
+          2
+        ],
+        [
+          "16px",
+          0
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "开放安排",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "沧海相逢 | 三校书院文化交流青岛站圆满落幕",
+      "url": "https://mp.weixin.qq.com/s/Vmnso3fM_3f7uYBNsdAqwQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          5995
+        ],
+        [
+          "12px",
+          54
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "书院互访",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "导师交流 | 第191期如约而至，格物致知，正心求教",
+      "url": "https://mp.weixin.qq.com/s/o6CHs4BXuRwmwv8qtBhKjg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2113
+        ],
+        [
+          "16px",
+          32
+        ],
+        [
+          "24px",
+          24
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "喜报｜吴健雄学院陈知新获评东南大学“瑞华杯”大学生年度人物",
+      "url": "https://mp.weixin.qq.com/s/wFTHBOEU7EgXrs-iFvG9lg",
+      "outer_style": {
+        "line-height": "2",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1804
+        ],
+        [
+          "15px",
+          211
+        ],
+        [
+          "16px",
+          61
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "人物荣誉",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "红色大讲堂 | 第八十四讲：震古烁今的长征文化丰碑",
+      "url": "https://mp.weixin.qq.com/s/kYb7xpRK6uJTn3bQPfCdCQ",
+      "outer_style": {
+        "font-size": "14px",
+        "padding": "0px",
+        "background-color": "rgb(201, 11, 21)",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1991
+        ],
+        [
+          "16px",
+          73
+        ],
+        [
+          "12px",
+          16
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "理论学习",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴院团队带着“耕读方案” 走向国际！",
+      "url": "https://mp.weixin.qq.com/s/iVurRgnjH2zxaPSHlvq4_Q",
+      "outer_style": {
+        "background-color": "rgb(222, 246, 255)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1362
+        ],
+        [
+          "16px",
+          68
+        ],
+        [
+          "12px",
+          44
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 吴健雄学院2022级本科生徐思琪论文被IEEE第103届车载技术大会录用",
+      "url": "https://mp.weixin.qq.com/s/Z1FawBVjul2i7i08XSHmOw",
+      "outer_style": {
+        "background-color": "rgb(251, 248, 241)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1765
+        ],
+        [
+          "12px",
+          43
+        ],
+        [
+          "21px",
+          16
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "论文成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "喜报频传 | 杨佳伟院友荣获英伟达 2025 - 2026 年度博士奖学金",
+      "url": "https://mp.weixin.qq.com/s/HsZi0zOd6Pd-_9LHRxj40Q",
+      "outer_style": {
+        "padding": "0px 10px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1872
+        ],
+        [
+          "12px",
+          31
+        ],
+        [
+          "16px",
+          4
+        ]
+      ],
+      "source_column": "校友动态",
+      "column": "校友动态",
+      "subtype": "校友成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴院人 | 杰出院友孙雅伦分享“逐梦科研路”",
+      "url": "https://mp.weixin.qq.com/s/ducxTMypn62eQNmRowhLlA",
+      "outer_style": {
+        "font-size": "16px"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          952
+        ],
+        [
+          "18px",
+          15
+        ],
+        [
+          "12px",
+          15
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "对话校友",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "学术引领 | 吴健雄学院2026级学业班主任强势来袭",
+      "url": "https://mp.weixin.qq.com/s/KCx7wfjBI0puEH67dO5lLA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          6685
+        ],
+        [
+          "15px",
+          225
+        ],
+        [
+          "16px",
+          72
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "人物风采",
+      "subtype": "团队风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "高峰体验 | 中国科学院院士洪伟为吴院新生科普毫米波与太赫兹技术",
+      "url": "https://mp.weixin.qq.com/s/3nb9HdosMpJXxSBv5adkxg",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2012
+        ],
+        [
+          "12px",
+          44
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "书院活动",
+      "subtype": "人文讲座",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院师生受邀参加西北工业大学第二届“三航泮池，智汇未来”学生节",
+      "url": "https://mp.weixin.qq.com/s/q_20Xb6KpciTlUmn_gpfFQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          880
+        ],
+        [
+          "12px",
+          34
+        ],
+        [
+          "16px",
+          25
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "文化活动",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "挺膺担当 | 吴健雄学院学生会第二十二届主席团候选人风采展示",
+      "url": "https://mp.weixin.qq.com/s/hfmxtu6LVYYhwFe86aNscg",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          4631
+        ],
+        [
+          "16px",
+          153
+        ],
+        [
+          "12px",
+          54
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "团队风采",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "相遇在佐治亚 | 在学术与自然间的双重邂逅",
+      "url": "https://mp.weixin.qq.com/s/bjbWEUzGmBvNMYO9yHF-kg",
+      "outer_style": {
+        "background-color": "rgb(241, 249, 252)",
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "2",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          2996
+        ],
+        [
+          "12px",
+          171
+        ],
+        [
+          "18px",
+          51
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "科创速递 | 我院本科生朱耀宇、黄铖海论文被国际通信顶会IEEE PIMRC录用",
+      "url": "https://mp.weixin.qq.com/s/kBSPS2S7Mu42id3MR7oDxQ",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "line-height": "1.6",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1534
+        ],
+        [
+          "12px",
+          130
+        ]
+      ],
+      "source_column": "科创速递",
+      "column": "科创竞赛",
+      "subtype": "论文成果",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "访企拓岗 | 吴健雄学院与安其威深化校企交流合作",
+      "url": "https://mp.weixin.qq.com/s/GCfCKBPD31UV_macqqTUcg",
+      "outer_style": {
+        "padding": "0px 10px",
+        "font-size": "14px",
+        "line-height": "1.8",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1298
+        ],
+        [
+          "18px",
+          38
+        ],
+        [
+          "12px",
+          25
+        ]
+      ],
+      "source_column": "校友活动",
+      "column": "校友活动",
+      "subtype": "校企交流",
+      "classification_basis": "source-only"
+    },
+    {
+      "title": "导师交流 | 第190期如约而至，问学有路，求索无涯",
+      "url": "https://mp.weixin.qq.com/s/iS6gHKPRbQiEQ9EeT8oVAA",
+      "outer_style": {
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          3180
+        ],
+        [
+          "16px",
+          32
+        ],
+        [
+          "24px",
+          30
+        ]
+      ],
+      "source_column": "导师交流",
+      "column": "导师交流",
+      "subtype": "导师交流预告",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院党总支与后勤党委多支部开展联学共建暨劳动实践活动",
+      "url": "https://mp.weixin.qq.com/s/sGDPaloN7aXI767LApsWIA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1365
+        ],
+        [
+          "12px",
+          41
+        ],
+        [
+          "20px",
+          1
+        ]
+      ],
+      "source_column": "党建动态",
+      "column": "党建思政",
+      "subtype": "红色实践",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "吴健雄学院招生宣传片招募主演啦！",
+      "url": "https://mp.weixin.qq.com/s/WcjXZdg-AIc8GD5-uNq57Q",
+      "outer_style": {
+        "background-color": "rgb(242, 249, 255)",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          809
+        ],
+        [
+          "12px",
+          45
+        ],
+        [
+          "30px",
+          16
+        ]
+      ],
+      "source_column": "通知公告",
+      "column": "通知公告",
+      "subtype": "活动招募",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "东南大学吴健雄学院召开树立和践行正确政绩观学习教育总结会",
+      "url": "https://mp.weixin.qq.com/s/qk94TrNS6nePRsE7Dv8uJg",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          960
+        ],
+        [
+          "12px",
+          44
+        ]
+      ],
+      "source_column": "综合新闻",
+      "column": "党建思政",
+      "subtype": "理论学习",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "文脉润初心 研学促成长 —— 长三角高校书院联盟开放日（金华站）活动纪实",
+      "url": "https://mp.weixin.qq.com/s/kPcnkuLIbVx8rDF-SSc1qg",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1620
+        ],
+        [
+          "12px",
+          123
+        ],
+        [
+          "15px",
+          112
+        ]
+      ],
+      "source_column": "书院活动",
+      "column": "书院活动",
+      "subtype": "书院互访",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "健雄学子 | 朱祎伦：是风雨，亦是彩虹",
+      "url": "https://mp.weixin.qq.com/s/Znz5iEbFs5I8CKKE6xw0RA",
+      "outer_style": {
+        "font-size": "14px",
+        "letter-spacing": "1px",
+        "padding": "0px 10px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          1604
+        ],
+        [
+          "12px",
+          34
+        ],
+        [
+          "16px",
+          28
+        ]
+      ],
+      "source_column": "人物风采",
+      "column": "人物风采",
+      "subtype": "健雄学子",
+      "classification_basis": "title-rule"
+    },
+    {
+      "title": "拓展视野 | 德国亚琛工业大学访学交流项目圆满完成",
+      "url": "https://mp.weixin.qq.com/s/RNo5PV3jAxHM4aNDxbaLCQ",
+      "outer_style": {
+        "background-color": "rgb(237, 245, 255)",
+        "letter-spacing": "1px",
+        "font-size": "16px",
+        "color": "rgb(62, 62, 62)"
+      },
+      "dominant_text_sizes": [
+        [
+          "14px",
+          5847
+        ],
+        [
+          "16px",
+          73
+        ],
+        [
+          "10px",
+          49
+        ]
+      ],
+      "source_column": "国际交流",
+      "column": "国际交流",
+      "subtype": "访学纪实",
+      "classification_basis": "title-rule"
+    }
+  ],
+  "column_counts": {
+    "学院新闻": 5,
+    "通知公告": 11,
+    "书院活动": 10,
+    "导师交流": 11,
+    "党建思政": 11,
+    "国际交流": 12,
+    "科创竞赛": 13,
+    "校友动态": 6,
+    "校友活动": 8,
+    "人物风采": 13
+  }
+}

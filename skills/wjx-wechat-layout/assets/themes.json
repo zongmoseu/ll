@@ -1,0 +1,57 @@
+{
+  "editorial-blue": {
+    "name": "蓝色通用",
+    "primary": "#3a528f",
+    "light": "#f2f7ff",
+    "accent": "#dbf5f9",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "bar"
+  },
+  "mentor-coral": {
+    "name": "导师交流珊瑚色",
+    "primary": "#bf2a2a",
+    "light": "#f6f8f7",
+    "accent": "#f96e57",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "number"
+  },
+  "profile-cyan": {
+    "name": "人物青蓝",
+    "primary": "#1893af",
+    "light": "#e6faff",
+    "accent": "#fdd835",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "bar"
+  },
+  "travel-blue": {
+    "name": "交流浅蓝",
+    "primary": "#409bc6",
+    "light": "#f2f9ff",
+    "accent": "#9bc0e5",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "bar"
+  },
+  "formal-red": {
+    "name": "党建与正式报道红",
+    "primary": "#bd3434",
+    "light": "#fefaf8",
+    "accent": "#f9e1d0",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "bar"
+  }
+}

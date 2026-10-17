@@ -1,0 +1,4 @@
+interface:
+  display_name: "吴院公众号排版"
+  short_description: "按栏目将Word图文稿排成吴院官号风格，输出HTML与配套图片预览"
+  default_prompt: "请使用 $wjx-wechat-layout 将这份图文稿按合适的栏目排成吴院公众号风格，保留原文和图片，输出HTML和预览。"
