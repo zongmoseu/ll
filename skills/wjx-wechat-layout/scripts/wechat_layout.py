@@ -342,7 +342,7 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
         if typ=='image':
             img=image(b['src'],b.get('role','content'),b.get('alt',''),b.get('width'))
             caption='<section style="margin-top:10px;text-align:center;font-size:12px;color:#858585;">'+html.escape(b['caption'])+'</section>' if b.get('caption') else ''
-            percent=float(b.get('width_percent',90))
+            percent=float(b.get('width_percent',100))
             if not 10<=percent<=100:raise ValueError('图片宽度百分比须在10–100之间')
             return f'<section style="margin:16px auto;width:{percent:g}%;">'+img+caption+'</section>'
         if typ=='gallery':

@@ -69,3 +69,7 @@ python scripts/wechat_layout.py render 工作目录/article.json --out 交付目
 ## 获奖名单表格
 
 实际竞赛稿验证后支持header_rows（表头行数）、column_widths（合计100的百分比数组）和nowrap_name_columns（从0起的姓名列索引）。表格单元格不继承正文两字缩进，压缩段后空隙；指定姓名列中的2–4字中文姓名保持完整。列宽参数适合无横向合并的规整表，复杂合并表优先自动列宽。姓名加粗按原稿保留，不能把非吴院同学也加粗。
+
+## 默认对齐与宽度
+
+image.width_percent省略时为100，以正文内容区为参照，不以屏幕为参照。普通配图不再默认为90%或95%。只有用户明确要求、小图或特殊布局才覆盖。image.width仍可限制头像/二维码等小图的像素上限。正文外层padding为0 10px；普通段落与图片不再叠加横向留白。intro内侧16px、标题底板内侧12px仅为框中文字留白。preview的外层20px留白不属于导入HTML。
