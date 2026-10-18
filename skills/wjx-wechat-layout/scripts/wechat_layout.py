@@ -131,7 +131,11 @@ def extract_docx(path, media_dir):
         raise ValueError('检测到修订，请确认最终稿并接受/拒绝修订后再转换')
     if doc.element.xpath('.//m:oMath | .//m:oMathPara'):
         raise ValueError('检测到Word公式，请先转换为清晰图片或等价文本并核对')
-    numroot=doc.part.numbering_part.element if doc.part.numbering_part else None
+    from docx.opc.constants import RELATIONSHIP_TYPE as RT
+    try:
+        numroot=doc.part.part_related_by(RT.NUMBERING).element
+    except KeyError:
+        numroot=None
     counters={};media_issues=0;handled_textboxes=0
     def numbering(p):
         pp=p._p.pPr
@@ -143,6 +147,7 @@ def extract_docx(path, media_dir):
         if n is None:return None
         numid=n.get(qn('w:val'));level=int(lvl.get(qn('w:val'))) if lvl is not None else 0
         if numid=='0':return None
+        if numroot is None:raise ValueError('Word列表编号定义缺失')
         num=next((x for x in numroot if x.tag==qn('w:num') and x.get(qn('w:numId'))==numid),None)
         if num is None:raise ValueError('Word列表编号定义缺失')
         absid=num.find(qn('w:abstractNumId')).get(qn('w:val'))
@@ -211,7 +216,7 @@ def extract_docx(path, media_dir):
                         part=doc.part.related_parts.get(rid)
                         if part is None:unresolved('Word图片关系缺失：'+rid);found=True;continue
                         ext=Path(str(part.partname)).suffix.lower()
-                        if ext not in ('.png','.jpg','.jpeg','.gif','.webp','.svg'):
+                        if ext not in ('.png','.jpg','.jpeg','.gif','.webp','.avif','.svg'):
                             unresolved('图片格式'+ext+'暂不支持，可补充PNG或JPEG替换。');found=True;continue
                         f=media_dir/(hashlib.sha256(part.blob).hexdigest()[:20]+ext);f.write_bytes(part.blob)
                         out.append({'type':'image','src':str(f.resolve()),'alt':''});found=True
@@ -314,7 +319,7 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
         f=Path(src)
         if not f.is_absolute():f=(path.parent/f).resolve()
         if not f.is_file():raise ValueError('图片不存在：'+str(f))
-        if f.suffix.lower() not in ('.png','.jpg','.jpeg','.gif','.webp','.svg'):raise ValueError('不支持的图片格式：'+f.suffix)
+        if f.suffix.lower() not in ('.png','.jpg','.jpeg','.gif','.webp','.avif','.svg'):raise ValueError('不支持的图片格式：'+f.suffix)
         local='images/'+hashlib.sha256(f.read_bytes()).hexdigest()[:20]+f.suffix.lower()
         dest=out/local
         if f.resolve()!=dest.resolve():shutil.copy2(f,dest)

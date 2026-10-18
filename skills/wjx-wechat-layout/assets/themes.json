@@ -55,7 +55,22 @@
     "heading": "bar"
   },
   "science-sections": {
-    "name": "科创速递分区版",
+    "name": "吴院统一浅蓝分区版（旧名兼容）",
+    "primary": "#2c709f",
+    "light": "#edf7fd",
+    "accent": "#8bb9d1",
+    "text": "#3e3e3e",
+    "font_size": 14,
+    "line_height": 1.6,
+    "letter_spacing": 1,
+    "heading": "section-label",
+    "page_background": "#f5fbff",
+    "group_border": "#6ca1c3",
+    "group_padding": 22,
+    "summary_padding": 26
+  },
+  "wjx-sections": {
+    "name": "吴院统一浅蓝分区版",
     "primary": "#2c709f",
     "light": "#edf7fd",
     "accent": "#8bb9d1",

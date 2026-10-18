@@ -8,3 +8,7 @@ __pycache__/
 Thumbs.db
 work/
 output/
+
+# Personal brand data stays local, never part of the public skills library.
+profiles/
+profile.json

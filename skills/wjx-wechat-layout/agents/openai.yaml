@@ -1,4 +1,4 @@
 interface:
   display_name: "吴院公众号排版"
-  short_description: "AI按吴院栏目排版Word图文稿，生成含配图的秀米插件导入包"
+  short_description: "吴院各栏目统一浅蓝分区排版，将Word图文稿生成含配图的秀米导入包"
   default_prompt: "请使用 $wjx-wechat-layout 将这份Word和可选配图排成吴院公众号风格，输出预览与可由插件导入秀米的article.xiumi.json。"
