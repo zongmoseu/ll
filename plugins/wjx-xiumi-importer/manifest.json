@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "吴院推送导入助手",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "导入AI按吴院skill生成的.xiumi.json，自动处理配图并写入秀米正文。无需工作台。",
   "permissions": [
     "activeTab",

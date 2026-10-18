@@ -6,7 +6,7 @@
  * @param {{digest:string,modules:number,paperId:string|null,pageStyle:string,timeOrigin:number}|null} receipt
  */
 export async function applyBridgeInPage(packet, action, receipt = null) {
-  const diagnostic = { pluginVersion: "0.5.1", stage: "preflight", total: 0, uploaded: 0, current: null };
+  const diagnostic = { pluginVersion: "0.5.2", stage: "preflight", total: 0, uploaded: 0, current: null };
   let ownsUpload = false;
   try {
     const fail = (message) => { throw new Error(message); };
@@ -210,6 +210,10 @@ export async function applyBridgeInPage(packet, action, receipt = null) {
       } catch(error) {
         Object.assign(diagnostic.current,describe(error));
         const detail=diagnostic.current;
+        if(`${detail.code} ${detail.message}`.includes("Auth:Failed_NotLogin")) {
+          detail.code="Auth:Failed_NotLogin";
+          fail("秀米上传服务未识别到有效登录。请在当前浏览器的秀米网页登录或重新登录，再刷新编辑页后导入（不是登录Edge账号）。正文尚未写入，无需重新生成数据包。");
+        }
         fail(`第 ${detail.index}/${diagnostic.total} 张图片上传失败（${detail.assetId}，${Math.ceil(detail.bytes/1024)}KB）${detail.status?`，HTTP ${detail.status}`:""}${detail.code?`，${detail.code}`:""}：${detail.message}。已完成 ${diagnostic.uploaded} 张，正文尚未写入。`);
       }
     }
