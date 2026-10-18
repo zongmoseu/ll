@@ -33,6 +33,6 @@ python skills/wjx-wechat-layout/scripts/wechat_layout.py render work/article.jso
 
 render同时生成预览、HTML与`article.xiumi.json`。现有正文HTML可用`scripts/export_xiumi.py`单独打包，不得只更改文件后缀。
 
-10个栏目、19项素材组件；Word内容保留、图片打包、独立导出和模拟秀米导入/重开核验已测试。真实秀米账号权限、图片上传及服务端保存尚待实测。插件不会自动发布。
+10个栏目、19项素材组件；Word内容保留、图片打包、独立导出和模拟秀米导入/重开核验已测试。2026-10-18用户确认智能汽车竞赛样稿实际导入秀米成功；保存后重开核验尚未单独确认。插件不会自动发布。
 
 导入核心复用[OpsLion](https://github.com/Infunus/OpsLion)，源码许可与出处见插件目录。用户稿件、完整公众号样本和本机登录数据不包含在仓库中。
