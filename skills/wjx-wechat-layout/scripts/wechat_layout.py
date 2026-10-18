@@ -132,7 +132,7 @@ def extract_docx(path, media_dir):
     if doc.element.xpath('.//m:oMath | .//m:oMathPara'):
         raise ValueError('检测到Word公式，请先转换为清晰图片或等价文本并核对')
     numroot=doc.part.numbering_part.element if doc.part.numbering_part else None
-    counters={}
+    counters={};media_issues=0;handled_textboxes=0
     def numbering(p):
         pp=p._p.pPr
         props=pp.find(qn('w:numPr')) if pp is not None else None
@@ -179,6 +179,7 @@ def extract_docx(path, media_dir):
                 out.append(block)
             runs=[]
         def read_run(el,href=None):
+            nonlocal media_issues,handled_textboxes
             run=Run(el,p);attrs={}
             for prop in ('bold','italic','underline'):
                 val=getattr(run,prop)
@@ -191,20 +192,38 @@ def extract_docx(path, media_dir):
                 if tag=='t':runs.append({'text':child.text or '',**attrs})
                 elif tag=='tab':runs.append({'text':'\t',**attrs})
                 elif tag in ('br','cr'):runs.append({'text':'\n',**attrs})
-                elif tag in ('drawing','pict'):
+                elif tag in ('drawing','pict','object'):
                     flush();found=False
+                    # Word stores its horizontal rule as a VML rect, not a bitmap.
+                    is_rule=any(n.get('{urn:schemas-microsoft-com:office:office}hr','').lower() in ('t','true','1') for n in child.iter()) and not any(n.get(qn('r:embed')) or n.get(qn('r:id')) for n in child.iter()) and not list(child.iter(qn('w:t')))
+                    if is_rule:
+                        out.append({'type':'divider'})
+                        if 'Word分隔横线已转换为简洁分隔装饰。' not in warnings:warnings.append('Word分隔横线已转换为简洁分隔装饰。')
+                        continue
+                    def unresolved(reason):
+                        nonlocal media_issues
+                        media_issues+=1
+                        out.append({'type':'unresolved_media','id':f'graphic-{media_issues}','label':f'待处理图形 {media_issues}','reason':reason,'context':p.text[:160]})
+                        warnings.append(f'图形{media_issues}暂不能显示，已保留原位置，可补充图片或确认略过。')
                     for img in child.iter():
                         rid=img.get(qn('r:embed')) or (img.get(qn('r:id')) if img.tag.endswith('imagedata') else None)
                         if not rid:continue
                         part=doc.part.related_parts.get(rid)
-                        if part is None:raise ValueError('Word图片关系缺失：'+rid)
+                        if part is None:unresolved('Word图片关系缺失：'+rid);found=True;continue
                         ext=Path(str(part.partname)).suffix.lower()
                         if ext not in ('.png','.jpg','.jpeg','.gif','.webp','.svg'):
-                            raise ValueError('Word图片格式需先转为PNG：'+ext)
+                            unresolved('图片格式'+ext+'暂不支持，可补充PNG或JPEG替换。');found=True;continue
                         f=media_dir/(hashlib.sha256(part.blob).hexdigest()[:20]+ext);f.write_bytes(part.blob)
                         out.append({'type':'image','src':str(f.resolve()),'alt':''});found=True
-                    if not found:raise ValueError('检测到无法提取的Word图形，请先转为图片后重试')
-                elif tag in ('object','sym'):raise ValueError('检测到嵌入对象或特殊符号，请先转换为可见文本或图片')
+                    textboxes=list(child.iter(qn('w:txbxContent')))
+                    for textbox in textboxes:
+                        handled_textboxes+=1
+                        for para in textbox.findall(qn('w:p')):out.extend(paragraphs(para)[0])
+                    if textboxes:
+                        found=True
+                        if '文本框文字已提取为顺序段落，需核对其位置。' not in warnings:warnings.append('文本框文字已提取为顺序段落，需核对其位置。')
+                    if not found:unresolved('此Word绘图暂不能自动渲染。')
+                elif tag=='sym':raise ValueError('检测到特殊符号，请先转换为可见文本')
         for child in el:
             tag=child.tag.rsplit('}',1)[-1]
             if tag=='r':read_run(child)
@@ -255,7 +274,7 @@ def extract_docx(path, media_dir):
         elif child.tag==qn('w:tbl'):blocks.append(table(child))
         elif child.tag!=qn('w:sectPr') and list(child.iter(qn('w:t'))):raise ValueError('检测到不支持的正文容器，请转换为普通段落')
     if doc.element.xpath('.//wp:anchor'):warnings.append('浮动图片按锚点位置插入，需对照Word核对图文顺序。')
-    if doc.element.xpath('.//w:txbxContent'):raise ValueError('检测到文本框；请先转换为普通段落，避免文字遗漏')
+    if len(doc.element.xpath('.//w:txbxContent'))>handled_textboxes:raise ValueError('检测到未能读取的文本框；请先转换为普通段落，避免文字遗漏')
     if title==path.stem:warnings.append('未检测到Word“标题”样式：请在article.json中确认主标题；未擅自删除首段。')
     if doc.element.xpath('.//w:footnoteReference | .//w:endnoteReference'):
         raise ValueError('检测到脚注或尾注，请先将注释并入正文后转换')
@@ -322,6 +341,9 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     def block(b):
         nonlocal count
         typ=b['type'];text=runs(b.get('runs',[]));primary=theme['primary'];light=theme['light'];accent=theme['accent']
+        if typ=='divider':return f'<section data-generated="true" style="width:32px;margin:18px auto;border-top:2px solid {accent};"></section>'
+        if typ=='unresolved_media':
+            return '<section data-generated="true" style="margin:18px 0;padding:18px;border:1px dashed #c58b42;background:#fff9ef;color:#8b622e;text-align:center;">'+html.escape(b.get('label','待处理图形'))+'<br /><span style="font-size:12px;">'+html.escape(b.get('reason','请补充图片'))+'</span></section>'
         if typ=='group':
             children=''.join(block(x) for x in b['blocks'])
             variant=b.get('variant','section')
@@ -439,6 +461,16 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     if missing:warnings.append('图片仍使用本地路径：交由编辑器接收/上传后才能成为公众号可发布稿。')
     checks={'column':column,'subtype':a.get('subtype'),'theme':theme_name,'classification_reviewed':a.get('classification_reviewed',False),'text_preserved':True,'source_text_changed_with_authorization':source_changed,'image_files':len(manifest),'images_pending_wechat_upload':missing,'z0_import_verified':False,'warnings':list(dict.fromkeys(warnings))}
     checks['layout_additions']=a.get('layout_additions',[])
+    def pending_graphics(blocks):
+        pending=[]
+        for item in blocks:
+            if item['type']=='unresolved_media':pending.append({k:item.get(k,'') for k in ['id','label','reason','context']})
+            elif item['type']=='group':pending.extend(pending_graphics(item['blocks']))
+            elif item['type']=='table':
+                for row in item['rows']:
+                    for cell in row:pending.extend(pending_graphics(cell['blocks']))
+        return pending
+    checks['unresolved_media']=pending_graphics(a['blocks']);checks['can_export']=not checks['unresolved_media']
     portable=json.loads(json.dumps(a))
     lookup={m['source']:m['local'] for m in manifest}
     def localize(blocks):
