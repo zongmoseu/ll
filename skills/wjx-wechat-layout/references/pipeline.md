@@ -42,3 +42,7 @@ render生成article.xiumi.json、preview.html、article.html、images/、可迁�
 检查can_export、xiumi_package_generated、text_preserved，数据包assetSummary.local为0。以390–430px看开头、正文、表格、照片与结尾，不仅检查溢出。模拟通过不代表真实秀米导入、保存、重开均通过。
 
 备用HTML可用scripts/export_xiumi.py独立打包。image-map仅供备用微信HTML映射，不改变主流程。预览页工具栏的复制功能不是主交付；不要把源码粘到普通编辑区。
+
+## 明确要求左右相邻的多图
+
+gallery.mode=row，images为2–3张独立图片，width_percent控制整组宽度（默认90）。图片在零间隙表格单元中左右相邻，不合成位图、不裁切、不拉伸，每张仍为独立img与包内素材。异同比例保持各自高度，不为了填满而裁人；图注位置词需同步。超过3张按内容分组，不塞进一排。

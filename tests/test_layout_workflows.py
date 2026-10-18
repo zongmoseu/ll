@@ -152,6 +152,27 @@ class LayoutWorkflows(unittest.TestCase):
             brand.render_article(self.input, profile, self.root / 'missing')
         self.assertFalse((self.root / 'missing/article.xiumi.json').exists())
 
+    def test_adjacent_gallery_keeps_images_independent_in_both_packages(self):
+        from bs4 import BeautifulSoup
+        article = deepcopy(self.article)
+        article['blocks'].append({'type': 'gallery', 'mode': 'row', 'images': [
+            {'src': str(self.image(f'photo-{i}.png', color))}
+            for i, color in enumerate(['red', 'blue', 'green'])]})
+        profile = self.profile()
+        brand.mark_ready(profile, 'neutral')
+        brand.write_json(self.input, article)
+        brand.render_article(self.input, profile, self.root / 'generic-row')
+        article['column'] = '书院活动'
+        brand.write_json(self.input, article)
+        wjx.render(self.input, self.root / 'wjx-row')
+        for folder in ['generic-row', 'wjx-row']:
+            packet = brand.read_json(self.root / folder / 'article.xiumi.json')
+            row = BeautifulSoup(packet['html'], 'html.parser').select_one('[data-image-layout="row"]')
+            self.assertEqual(len(row.select('td')), 3)
+            self.assertEqual(len(set(img['src'] for img in row.select('img'))), 3)
+            self.assertEqual(packet['assetSummary']['embedded'], 3)
+            self.assertEqual(packet['assetSummary']['local'], 0)
+
     def test_docx_with_and_without_numbering_part(self):
         original = self.root / 'normal.docx'
         doc = Document()

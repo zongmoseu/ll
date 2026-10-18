@@ -31,3 +31,7 @@ article.xiumi.json采用xiumi-bridge/v3，含native.modules、pageFormat、内�
 text_preserved、can_export、xiumi_package_generated须为true；图片内嵌、assetSummary.local:0；本地检查不等同账号导入保存。脚本不登录、上传、发布。
 
 DOCX可无列表编号部件，有编号引用但缺定义则停止；修订、公式、未支持媒体不要丢弃。静态WebP/AVIF按实际字节转PNG，动态内容不默默变静态。图形待处理时can_export:false，不生成假完成包。
+
+## 明确要求左右相邻的多图
+
+gallery.mode=row，images为2–3张独立图片，width_percent控制整组宽度（默认90）。图片在零间隙表格单元中左右相邻，不合成位图、不裁切、不拉伸，每张仍为独立img与包内素材。异同比例保持各自高度，不为了填满而裁人；图注位置词需同步。超过3张按内容分组，不塞进一排。
