@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "吴院推送导入助手",
+  "version": "0.5.0",
+  "description": "导入AI按吴院skill生成的.xiumi.json，自动处理配图并写入秀米正文。无需工作台。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://xiumi.us/*",
+    "https://*.xiumi.us/*"
+  ],
+  "action": {
+    "default_title": "吴院推送导入助手",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

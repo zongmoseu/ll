@@ -1,57 +1,38 @@
 # ll · 技能库
 
-按技能独立目录组织的个人技能库。每个技能包含自己的 `SKILL.md`、参考资料、脚本和必要素材，后续新技能继续添加到 `skills/` 下。
+按独立目录管理AI技能和配套插件。
 
-| 技能 | 用途 |
+| 组件 | 用途 |
 | --- | --- |
-| [吴院公众号排版](skills/wjx-wechat-layout/SKILL.md) | 按栏目将 Word / Markdown / 图文稿转换为供 Z0 导入公众号后台的 HTML |
+| [吴院公众号排版skill](skills/wjx-wechat-layout/SKILL.md) | AI读取Word和可选配图，完成吴院风格排版，输出含图片的秀米导入包 |
+| [吴院推送导入助手](plugins/wjx-xiumi-importer/README.md) | 独立Chrome／Edge插件，把数据包的图片与正文导入秀米 |
 
-## 吴院公众号排版
+## 只需skill＋插件
 
-- 10 个栏目分类、5 种基础视觉样式及可选科创分区版。
-- 19 项用户提供的品牌与账号素材组件（含宣传部成稿页尾名片）。
-- 保留正文、图片、图注、姓名加粗和原稿署名。
-- 输出正文 HTML、手机预览、配图、结构稿和发布信息。
-- 以 100 篇吴院官号原文和宣传培训材料作为参考。
+1. 给AI提供Word和可选图片包，要求使用吴院排版skill。
+2. AI交付预览与`article.xiumi.json`。所有配图已装入数据包。
+3. 在秀米新建空白图文，插件选择数据包，点击“导入正文与图片”。
+4. 在秀米核对标题摘要并保存，重新打开后用插件核验。
 
-首个科创速递实稿的本地排版效果已获用户认可；Z0 导入与公众号保存预览尚未实测。仓库不包含该测试 Word、完整文章网页或个人工作目录。
+不需要工作台、本地HTTP服务或额外AI API Key。排版修改直接在AI对话中提出。
 
-### 使用
+## 安装
 
-将 `skills/wjx-wechat-layout` 安装到使用者的技能目录，或让支持技能的助手读取该目录下的 `SKILL.md`。
+技能：将`skills/wjx-wechat-layout`安装到助手技能目录。依赖为Python、python-docx、beautifulsoup4。
 
-Python 依赖：
+插件：下载本仓库，在浏览器扩展管理页开启开发者模式，加载`plugins/wjx-xiumi-importer`文件夹。只需安装一次。
+
+## AI侧命令
 
 ```sh
 python -m pip install -r skills/wjx-wechat-layout/requirements.txt
-```
-
-示例请求：
-
-> 使用吴院公众号排版技能，将这份 Word 按科创速递栏目排版，保留原文与图片，输出 HTML 和预览。
-
-可独立运行的转换脚本：
-
-```sh
 python skills/wjx-wechat-layout/scripts/wechat_layout.py extract input.docx --out work/article.json
-# 按技能说明复核栏目、结构与原文后，再生成输出
+# AI复核栏目、图文对应关系和结构稿后再运行
 python skills/wjx-wechat-layout/scripts/wechat_layout.py render work/article.json --out output
 ```
 
-图片须由 Z0 接收/上传，或映射为微信素材地址。本技能不自动登录、上传、写草稿或发布。
+render同时生成预览、HTML与`article.xiumi.json`。现有正文HTML可用`scripts/export_xiumi.py`单独打包，不得只更改文件后缀。
 
-## 添加其他技能
+10个栏目、19项素材组件；Word内容保留、图片打包、独立导出和模拟秀米导入/重开核验已测试。真实秀米账号权限、图片上传及服务端保存尚待实测。插件不会自动发布。
 
-```text
-skills/
-  wjx-wechat-layout/
-    SKILL.md
-    agents/
-    assets/
-    references/
-    scripts/
-  another-skill/
-    SKILL.md
-```
-
-每个技能放入独立子目录，并在上方索引登记。这里采用单仓库目录结构，不使用 Git submodule。
+导入核心复用[OpsLion](https://github.com/Infunus/OpsLion)，源码许可与出处见插件目录。用户稿件、完整公众号样本和本机登录数据不包含在仓库中。

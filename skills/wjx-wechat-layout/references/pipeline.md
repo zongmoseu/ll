@@ -1,3 +1,7 @@
+# 当前交付路径：AI skill＋独立秀米插件
+
+render会自动输出article.xiumi.json，包含全部配图，不需要工作台。使用方法见xiumi-plugin.md。本文关于HTML图片映射、Z0或工作台的说明仅保留为备用/历史能力，不是当前用户主流程。
+
 # 结构稿与脚本
 
 依赖Python 3、python-docx、beautifulsoup4；全部本地运行，无API。Playwright/Edge可用于浏览器核验，不是转换脚本的必需依赖。

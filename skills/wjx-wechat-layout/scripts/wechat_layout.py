@@ -497,6 +497,21 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     if not a.get('summary'):
         checks['warnings'].append('缺少摘要：请根据原稿拟定并核对，在公众号摘要栏填写。');dump(out/'checks.json',checks)
     (out/'导入说明.txt').write_text('栏目：'+column+' / '+a.get('subtype','')+'\n主标题：'+a['title']+'\n\n目标流程：HTML → Z0编辑器 → 微信公众号后台，不使用秀米。\narticle.html：用于Z0 HTML导入的正文片段，内联样式，不含预览工具栏或脚本。\npreview.html：本地预览，可复制正文作为辅助方式。\nimages：配套图片，不要丢弃。\npublication.json：标题、摘要、封面信息，另填后台对应栏目。\n\nZ0接收本地图片/上传后的实际行为尚待实测。图片须由编辑器接收或上传微信，本地路径不是可发布地址。可将微信返回的地址填入image-map.template.json，使用render --image-map重新生成。\n导入后保存草稿，手机预览核对文字、图片、图集、二维码和署名。本工具不自动登录、上传、写草稿或发布。\n',encoding='utf-8')
+    packet_path=out/'article.xiumi.json'
+    if packet_path.exists():packet_path.unlink()
+    checks['xiumi_package_generated']=False;checks['xiumi_import_verified']=False
+    if checks['can_export']:
+        try:
+            import importlib.util
+            spec=importlib.util.spec_from_file_location('wjx_xiumi_export',SKILL_DIR/'scripts/export_xiumi.py')
+            exporter=importlib.util.module_from_spec(spec);spec.loader.exec_module(exporter)
+            packet=exporter.export(out/'article.html',source_html=fragment)
+            checks['xiumi_package_generated']=True;checks['xiumi_embedded_images']=len(packet['assets'])
+            checks['warnings']=[w for w in checks['warnings'] if not w.startswith('图片仍使用本地路径')]
+            checks['warnings'].append('秀米包已内嵌配图，插件将在导入时上传；备用HTML仍使用本地images目录。')
+        except ValueError as e:checks['warnings'].append('秀米导入包未生成：'+str(e))
+    dump(out/'checks.json',checks)
+    (out/'导入说明.txt').write_text('推荐流程：Word与可选图片包交给AI → 吴院排版skill → article.xiumi.json → 秀米插件。无需启动工作台。\n\narticle.xiumi.json：给“吴院推送导入助手”选择，内含正文、模块和配图文件内容。\npreview.html：本地预览，article.html与images是备用HTML和配图。\npublication.json：主标题、摘要等信息，在秀米相应栏目核对填写。\n\n在秀米新建空白图文，打开插件，选择article.xiumi.json，点击导入。插件会尝试先上传图片，再写入正文；完成后在秀米手动保存，重新打开后用插件核验。\n真实账号权限、图片上传和服务端保存仍须实测，不能仅凭本地或模拟测试认定完成。\n',encoding='utf-8')
     return checks
 
 def main():
