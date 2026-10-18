@@ -2,6 +2,8 @@
 
 按独立目录管理AI技能和配套插件。
 
+通用排版 skill＋秀米插件已整理为独立工作流：[ll帮你喂给xiumi](https://github.com/zongmoseu/ll-xiumi)。首次使用可到新项目首页下载完整安装包并查看使用指南。
+
 | 组件 | 用途 |
 | --- | --- |
 | [吴院公众号排版skill](skills/wjx-wechat-layout/SKILL.md) | 吴院所有栏目统一浅蓝分区风格，输出含图片的秀米导入包 |
