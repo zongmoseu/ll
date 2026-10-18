@@ -531,7 +531,7 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
             checks['warnings'].append('秀米包已内嵌配图，插件将在导入时上传；备用HTML仍使用本地images目录。')
         except ValueError as e:checks['warnings'].append('秀米导入包未生成：'+str(e))
     dump(out/'checks.json',checks)
-    (out/'导入说明.txt').write_text('推荐流程：Word与可选图片包交给AI → 吴院排版skill → article.xiumi.json → 秀米插件。无需启动工作台。\n\narticle.xiumi.json：给“吴院推送导入助手”选择，内含正文、模块和配图文件内容。\npreview.html：本地预览，article.html与images是备用HTML和配图。\npublication.json：主标题、摘要等信息，在秀米相应栏目核对填写。\n\n在秀米新建空白图文，打开插件，选择article.xiumi.json，点击导入。插件会尝试先上传图片，再写入正文；完成后在秀米手动保存，重新打开后用插件核验。\n真实账号权限、图片上传和服务端保存仍须实测，不能仅凭本地或模拟测试认定完成。\n',encoding='utf-8')
+    (out/'导入说明.txt').write_text('推荐流程：Word与可选图片包交给AI → 吴院排版skill → article.xiumi.json → 秀米插件。无需启动工作台。\n\narticle.xiumi.json：给“ll帮你喂给xiumi”选择，内含正文、模块和配图文件内容。\npreview.html：本地预览，article.html与images是备用HTML和配图。\npublication.json：主标题、摘要等信息，在秀米相应栏目核对填写。\n\n在秀米新建空白图文，打开插件，选择article.xiumi.json，点击导入。插件会尝试先上传图片，再写入正文；完成后在秀米手动保存，重新打开后用插件核验。\n真实账号权限、图片上传和服务端保存仍须实测，不能仅凭本地或模拟测试认定完成。\n',encoding='utf-8')
     return checks
 
 def main():

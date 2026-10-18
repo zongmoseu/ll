@@ -6,7 +6,7 @@
 | --- | --- |
 | [吴院公众号排版skill](skills/wjx-wechat-layout/SKILL.md) | 吴院所有栏目统一浅蓝分区风格，输出含图片的秀米导入包 |
 | [通用品牌公众号排版skill](skills/wechat-brand-layout/SKILL.md) | 首次收集各账号的封面、Logo、开头和尾图，保存本地品牌配置，独立生成秀米导入包 |
-| [吴院推送导入助手](plugins/wjx-xiumi-importer/README.md) | 独立Chrome／Edge插件，把数据包的图片与正文导入秀米 |
+| [ll帮你喂给xiumi](plugins/wjx-xiumi-importer/README.md) | 独立Chrome／Edge插件，把数据包的图片与正文导入秀米 |
 
 ## 只需skill＋插件
 
@@ -21,7 +21,7 @@
 
 技能：将`skills/wjx-wechat-layout`（吴院版）或`skills/wechat-brand-layout`（通用版）安装到助手技能目录。两者均可独立安装。依赖为Python、python-docx、beautifulsoup4、Pillow。图片打包会校验实际格式，避免文件后缀与数据类型不一致。
 
-插件：下载本仓库，在浏览器扩展管理页开启开发者模式，加载`plugins/wjx-xiumi-importer`文件夹。只需安装一次。插件界面暂保留“吴院”名称，同时接受两个skill输出的xiumi-bridge/v3数据包，不向正文注入学院素材。
+插件：下载本仓库，在浏览器扩展管理页开启开发者模式，加载`plugins/wjx-xiumi-importer`文件夹。只需安装一次。插件名为“ll帮你喂给xiumi”，接受两个skill输出的xiumi-bridge/v3数据包。
 
 ## AI侧命令
 

@@ -4,7 +4,7 @@ let packet=null,receipt=null,busy=false,lastDiagnostic=null;
 function show(message,kind=""){el("status").textContent=message;el("status").className=kind;}
 function buttons(){el("insert").disabled=busy||!packet;el("verify").disabled=busy||!packet||!receipt;el("file").disabled=busy;el("diagnostic").disabled=busy||!lastDiagnostic;}
 function validate(value){
-  if(value?.schema!=="xiumi-bridge/v3"||!Array.isArray(value.native?.modules)||!value.native.modules.length||!Array.isArray(value.assets)||typeof value.html!=="string")throw new Error("请选择吴院skill输出的article.xiumi.json，不能直接选择Word或HTML。");
+  if(value?.schema!=="xiumi-bridge/v3"||!Array.isArray(value.native?.modules)||!value.native.modules.length||!Array.isArray(value.assets)||typeof value.html!=="string")throw new Error("请选择排版skill输出的article.xiumi.json，不能直接选择Word或HTML。");
   if(value.assetSummary?.local)throw new Error("数据包仍有未绑定的本地图片，请让AI重新打包。");
   return value;
 }
@@ -38,5 +38,5 @@ async function execute(action){
 el("insert").addEventListener("click",()=>execute("insert"));
 el("verify").addEventListener("click",()=>execute("verify"));
 el("diagnostic").addEventListener("click",()=>{
-  if(!lastDiagnostic)return;const url=URL.createObjectURL(new Blob([JSON.stringify(lastDiagnostic,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="吴院秀米导入_错误说明.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  if(!lastDiagnostic)return;const url=URL.createObjectURL(new Blob([JSON.stringify(lastDiagnostic,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="ll_xiumi_错误说明.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });

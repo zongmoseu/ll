@@ -38,6 +38,6 @@ python scripts/brand_layout.py render work/article.json --profile /path/to/profi
 
 ## 交付
 
-给用户可点击的实际JSON和预览文件链接。沿用[独立秀米插件](https://github.com/zongmoseu/ll/tree/main/plugins/wjx-xiumi-importer)，现有界面名称为“吴院推送导入助手”，但数据格式支持本skill的任意品牌包，无需安装另一个插件；不会向正文注入吴院素材。用户在秀米空白图文中选择JSON后导入、核对并保存。
+给用户可点击的实际JSON和预览文件链接。沿用[独立秀米插件](https://github.com/zongmoseu/ll/tree/main/plugins/wjx-xiumi-importer)，界面名称为“ll帮你喂给xiumi”，支持本skill的任意品牌包，无需安装另一个插件；不会向正文注入吴院素材。用户在秀米空白图文中选择JSON后导入、核对并保存。
 
 脚本依赖见requirements.txt。profile是本地持久数据，升级skill不要覆盖；代码更新不自动改变用户已有品牌配置。

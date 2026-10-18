@@ -6,7 +6,7 @@
  * @param {{digest:string,modules:number,paperId:string|null,pageStyle:string,timeOrigin:number}|null} receipt
  */
 export async function applyBridgeInPage(packet, action, receipt = null) {
-  const diagnostic = { pluginVersion: "0.5.2", stage: "preflight", total: 0, uploaded: 0, current: null };
+  const diagnostic = { pluginVersion: "0.6.0", stage: "preflight", total: 0, uploaded: 0, current: null };
   let ownsUpload = false;
   try {
     const fail = (message) => { throw new Error(message); };
@@ -123,7 +123,7 @@ export async function applyBridgeInPage(packet, action, receipt = null) {
     if (container.cellArray.length) fail("分模块导入需要空白秀米图文。请新建图文后导入；原稿文字修改可用“校验并原位更新”");
     if (typeof facility.createDefaultComp !== "function" || typeof facility.beforeInsertingComps !== "function") fail("秀米原生组件工厂不可用，未写入正文");
     const native = packet.native;
-    if (!Array.isArray(native?.modules) || !native.modules.length || native.modules.length > 5000) fail("缺少可导入的模块边界，请让 AI 使用新版吴院skill重新导出 Bridge 数据包");
+    if (!Array.isArray(native?.modules) || !native.modules.length || native.modules.length > 5000) fail("缺少可导入的模块边界，请让 AI 使用新版排版skill重新导出 Bridge 数据包");
     const allowedStyles = new Set(["font-family", "font-size", "line-height", "letter-spacing", "color", "text-align", "text-indent", "padding-top", "padding-right", "padding-bottom", "padding-left", "background-color", "background-image", "background-size", "background-position", "background-repeat"]);
     const format = document.createElement("section");
     for (const [key, value] of Object.entries(native.pageFormat?.styles || {})) { if (!allowedStyles.has(key) || typeof value !== "string") fail("全文格式包含未知设置"); format.style.setProperty(key, value); if (!format.style.getPropertyValue(key)) fail("全文格式无效"); }
