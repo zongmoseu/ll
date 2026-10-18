@@ -73,3 +73,11 @@ python scripts/wechat_layout.py render 工作目录/article.json --out 交付目
 ## 默认对齐与宽度
 
 image.width_percent省略时为100，以正文内容区为参照，不以屏幕为参照。普通配图不再默认为90%或95%。只有用户明确要求、小图或特殊布局才覆盖。image.width仍可限制头像/二维码等小图的像素上限。正文外层padding为0 10px；普通段落与图片不再叠加横向留白。intro内侧16px、标题底板内侧12px仅为框中文字留白。preview的外层20px留白不属于导入HTML。
+
+## 分区排版与内容守恒
+
+group包含blocks数组，递归组合标题、文字、图片与图注，variant可为section或summary。组不额外增加左右内边距，保证图与段落/区块外沿对齐。speaker用于已有发言人姓名行；end_mark输出装饰END。section_label用于获准补充的分节标题，label须同时写入article.layout_additions，检查记录会列明这些新增文字。新增标题不混入原文校验，原段落、图片顺序和引用仍须保留。
+
+science-sections为可选科创分区主题：淡蓝底、白色内容组、统一蓝色标题标签及短装饰点。不要强制覆盖其他栏目或用户指定主题。图文分组应依据语义，不按固定段落下标套用。
+
+college-account-card是用户提供的宣传部同篇成稿末尾完整名片，组件可设edge_aligned:true使边缘与正文同宽。不复制该稿编辑/审核姓名；名片二维码没有进行实时扫码确认。

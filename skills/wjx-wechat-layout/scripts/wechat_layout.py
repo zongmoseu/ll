@@ -26,7 +26,9 @@ def runs_text(runs):
 def blocks_text(blocks):
     parts=[]
     for b in blocks:
-        if b['type']=='table':
+        if b['type']=='group':parts.append(blocks_text(b['blocks']))
+        elif b['type'] in ('section_label','end_mark'):continue
+        elif b['type']=='table':
             for row in b['rows']:
                 for cell in row:parts.append(blocks_text(cell['blocks']))
         elif b['type']=='gallery':
@@ -320,10 +322,26 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     def block(b):
         nonlocal count
         typ=b['type'];text=runs(b.get('runs',[]));primary=theme['primary'];light=theme['light'];accent=theme['accent']
+        if typ=='group':
+            children=''.join(block(x) for x in b['blocks'])
+            variant=b.get('variant','section')
+            bg=light if variant=='summary' else '#ffffff'
+            return f'<section style="box-sizing:border-box;width:100%;margin:0 0 26px;padding:18px 0 2px;background:{bg};">{children}</section>'
+        if typ=='section_label':
+            label=str(b['label'])
+            if label not in a.get('layout_additions',[]):raise ValueError('新增分节标题必须记入layout_additions')
+            return '<section data-generated="true">'+block({'type':'heading','level':2,'runs':[{'text':label}]})+'</section>'
+        if typ=='end_mark':
+            return f'<section data-generated="true" style="margin:26px 0 18px;text-align:center;font-size:13px;letter-spacing:3px;font-weight:700;color:{primary};">END</section>'
+        if typ=='speaker':
+            return f'<p style="margin:20px 0 10px;font-size:14px;font-weight:700;color:{primary};text-indent:0;">{text}</p>'
         if typ=='heading':
             level=b.get('level',2)
             if level>=3:return f'<section style="margin:22px 0 12px;font-size:16px;font-weight:700;color:{primary};">{text}</section>'
             count+=1
+            if theme['heading']=='section-label':
+                ornaments=f'<span data-generated="true" style="display:inline-block;width:7px;height:7px;margin:0 9px;background:{accent};vertical-align:middle;"></span>'
+                return f'<section style="text-align:center;margin:28px 0 16px;font-size:16px;font-weight:700;">{ornaments}<span style="display:inline-block;padding:6px 18px;background:{primary};color:#ffffff;">{text}</span>{ornaments}</section>'
             if theme['heading']=='number':
                 label='<span data-generated="true" style="display:inline-block;padding:3px 9px;margin-right:10px;border-radius:20px;background:'+accent+';color:#ffffff;">'+f'{count:02d}'+'</span>'
                 return f'<section style="margin:28px 0 16px;font-size:16px;font-weight:700;color:{primary};">{label}{text}</section>'
@@ -338,7 +356,8 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
             if not re.fullmatch(r'#[0-9a-fA-F]{6}',bg):raise ValueError('组件背景须为六位色值')
             img=image(source,'component:'+key,meta['label'],b.get('width',meta['display_width']))
             caption='<p style="text-align:center;font-size:12px;color:#858585;margin:10px 0 0;">'+html.escape(b['caption'])+'</p>' if b.get('caption') else ''
-            return '<section style="margin:20px 0;padding:12px;background:'+bg+';">'+img+caption+'</section>'
+            padding='0' if b.get('edge_aligned') else '12px'
+            return '<section style="margin:20px 0;padding:'+padding+';background:'+bg+';">'+img+caption+'</section>'
         if typ=='image':
             img=image(b['src'],b.get('role','content'),b.get('alt',''),b.get('width'))
             caption='<section style="margin-top:10px;text-align:center;font-size:12px;color:#858585;">'+html.escape(b['caption'])+'</section>' if b.get('caption') else ''
@@ -394,6 +413,9 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     body=''.join(block(b) for b in a['blocks'])
     heading='<h1 style="font-size:22px;line-height:1.4;margin:0 0 24px;">'+html.escape(a['title'])+'</h1>' if include_title else ''
     fragment=f'<section style="box-sizing:border-box;padding:0 10px;font-size:{theme["font_size"]:g}px;line-height:{theme["line_height"]:g};letter-spacing:{theme["letter_spacing"]:g}px;color:{theme["text"]};">'+heading+body+'</section>'
+    if theme.get('page_background'):
+        if not re.fullmatch(r'#[0-9a-fA-F]{6}',theme['page_background']):raise ValueError('背景色必须为六位色值')
+        fragment=fragment.replace('padding:0 10px;',f'padding:16px 10px;background:{theme["page_background"]};',1)
     parsed=BeautifulSoup(fragment,'html.parser')
     for generated in parsed.select('[data-generated]'):generated.decompose()
     expected=(a['title'] if include_title else '')+blocks_text(a['blocks'])
@@ -408,11 +430,13 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
     missing=[m['local'] for m in manifest if not m['wechat_url']]
     if missing:warnings.append('图片仍使用本地路径：交由编辑器接收/上传后才能成为公众号可发布稿。')
     checks={'column':column,'subtype':a.get('subtype'),'theme':theme_name,'classification_reviewed':a.get('classification_reviewed',False),'text_preserved':True,'source_text_changed_with_authorization':source_changed,'image_files':len(manifest),'images_pending_wechat_upload':missing,'z0_import_verified':False,'warnings':list(dict.fromkeys(warnings))}
+    checks['layout_additions']=a.get('layout_additions',[])
     portable=json.loads(json.dumps(a))
     lookup={m['source']:m['local'] for m in manifest}
     def localize(blocks):
         for b in blocks:
-            if b['type']=='component':
+            if b['type']=='group':localize(b['blocks'])
+            elif b['type']=='component':
                 f=Path(b.get('src') or str(SKILL_DIR/COMPONENTS[b['component']]['file']))
                 if not f.is_absolute():f=(path.parent/f).resolve()
                 b['src']=lookup[str(f)]

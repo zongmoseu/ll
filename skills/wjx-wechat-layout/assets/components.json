@@ -214,5 +214,17 @@
     "background": "light",
     "sha256": "a17d4bd220549e0cba061f1484153e3ec32d15433634e12c9ef9f4b8041a12e4",
     "note": "按主体与背景选用，保留比例。"
+  },
+  "college-account-card": {
+    "label": "吴健雄学院账号名片（宣传部科创稿版）",
+    "family": "account-card",
+    "file": "assets/components/college-account-card.jpg",
+    "source_file": "科创速递｜吴院学子在第二十一届全国大学生智能汽车竞赛（华东赛区）中斩获佳绩.html · 文末名片",
+    "width": 1080,
+    "height": 554,
+    "display_width": 1000,
+    "background": "light",
+    "sha256": "87cf96855d7fe20fbe4d5e141339a20e34fe79b311b488413fbd41d9b809e219",
+    "note": "原样取自用户提供的宣传部同篇成稿；完整名片不裁切，不移植该稿署名。二维码实际跳转与Z0导入待使用时核对。"
   }
 }
