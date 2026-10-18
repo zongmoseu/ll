@@ -16,7 +16,7 @@ render用profile.theme作为默认，article.style_overrides可覆盖单篇；�
 
 group含blocks及variant（intro / section / summary），按语义分组。图片、图注、表格可与文字在同一组。样式来自profile，普通组默认22px，结语26px；不开边框也保留文字留白。
 
-image含本地src、可选width_percent（默认90）、width（像素上限）、alt、caption；已有独立图注勿重复。gallery含images数组，默认stack；滑动图需真实秀米验证。
+image含本地src、可选width_percent（默认90）、width（像素上限）、alt、caption；已有独立图注勿重复。多张照片使用连续image或gallery.images中的独立图片，默认stack；不拼成一个文件，不默认并排。只有明确选择时使用滑动图并在真实秀米验证。源文件若是预拼图，先查看边界，再按用户意图拆分或索取原片；记录派生图来源与像素区域，不误拆完整设计图。
 
 table.rows是cell数组，各cell含blocks、colspan、rowspan；可配header_rows、column_widths（合计100）、nowrap_name_columns。保持可编辑；窄屏不可读时讨论拆分，不删列。
 

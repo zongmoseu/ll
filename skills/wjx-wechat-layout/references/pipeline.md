@@ -19,7 +19,7 @@ python scripts/wechat_layout.py render work/article.json --out output
 - group：blocks递归数组，variant为intro、section、summary。统一主题中使用对应细框与留白。
 - section_label：新增导航标题，label必须同时出现在layout_additions；不计为原稿内容。end_mark输出装饰END。
 - image：本地src，width_percent默认90，可有width像素上限、alt、caption。独立caption段存在时勿重复加图注。图片不裁切，检查占屏高度。
-- gallery：images为image对象数组，mode默认stack；scroll需真实秀米保存后验证。
+- gallery：images为各自独立的image对象，mode默认stack；也可直接使用连续image模块。不得用一张合成大图代替多张照片，默认不并排；scroll仅用户要求时启用并在真实秀米保存后验证。Word预拼图须先视觉检查，清晰边界经拆分后生成多个image，记录来源及像素区域；不要误拆海报和名片。
 - list_item：marker和level，编号与文本分开。
 - table：rows为cell数组，cell包含blocks、colspan、rowspan；header_rows、column_widths（合计100）、nowrap_name_columns用于表头、规整表列宽与姓名不拆行。复杂长表不要缩小到不可读。
 - component：component为assets/components.json中的ID；可设置width、background、edge_aligned。college-account-card为完整学院名片，保持原样，不沿用参考稿署名。
