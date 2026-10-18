@@ -64,6 +64,7 @@
     "line_height": 1.6,
     "letter_spacing": 1,
     "heading": "section-label",
-    "page_background": "#f5fbff"
+    "page_background": "#f5fbff",
+    "group_border": "#6ca1c3"
   }
 }

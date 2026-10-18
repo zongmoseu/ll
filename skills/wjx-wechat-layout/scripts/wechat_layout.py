@@ -326,6 +326,12 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
             children=''.join(block(x) for x in b['blocks'])
             variant=b.get('variant','section')
             bg=light if variant=='summary' else '#ffffff'
+            border=theme.get('group_border')
+            if border:
+                if not re.fullmatch(r'#[0-9a-fA-F]{6}',border):raise ValueError('分区边框颜色须为六位色值')
+                padding=22 if variant=='summary' else 15
+                rounding='border-top-left-radius:20px;border-bottom-right-radius:20px;' if variant=='intro' else ''
+                return f'<section data-layout-group="{html.escape(variant,quote=True)}" style="box-sizing:border-box;width:100%;margin:0 0 26px;padding:{padding}px;border:1px solid {border};{rounding}background:{bg};">{children}</section>'
             return f'<section style="box-sizing:border-box;width:100%;margin:0 0 26px;padding:18px 0 2px;background:{bg};">{children}</section>'
         if typ=='section_label':
             label=str(b['label'])
@@ -389,7 +395,8 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
                                     rendered=runs([{**run,'text':part}])
                                     if re.fullmatch(r'[\u4e00-\u9fff]{2,4}',part):rendered='<span style="white-space:nowrap;display:inline-block;">'+rendered+'</span>'
                                     pieces.append(rendered)
-                            chunks.append('<p style="margin:0;text-indent:0;">'+''.join(pieces)+'</p>')
+                            name_markup=''.join(pieces).replace('</span>、','、</span>')
+                            chunks.append('<p style="margin:0;text-indent:0;">'+name_markup+'</p>')
                         content=''.join(chunks)
                     content=content.replace('text-indent:2em','text-indent:0').replace('margin:0 0 16px','margin:0')
                     header=row_index<int(b.get('header_rows',0))

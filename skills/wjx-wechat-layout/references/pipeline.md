@@ -76,8 +76,10 @@ image.width_percent省略时为100，以正文内容区为参照，不以屏幕�
 
 ## 分区排版与内容守恒
 
-group包含blocks数组，递归组合标题、文字、图片与图注，variant可为section或summary。组不额外增加左右内边距，保证图与段落/区块外沿对齐。speaker用于已有发言人姓名行；end_mark输出装饰END。section_label用于获准补充的分节标题，label须同时写入article.layout_additions，检查记录会列明这些新增文字。新增标题不混入原文校验，原段落、图片顺序和引用仍须保留。
+group包含blocks数组，递归组合标题、文字、图片与图注，variant可为section或summary。无框组不额外增加左右内边距；有框主题使用共同的框内留白，图片100%填充框内可用宽度，与文字区域对齐。speaker用于已有发言人姓名行；end_mark输出装饰END。section_label用于获准补充的分节标题，label须同时写入article.layout_additions，检查记录会列明这些新增文字。新增标题不混入原文校验，原段落、图片顺序和引用仍须保留。
 
 science-sections为可选科创分区主题：淡蓝底、白色内容组、统一蓝色标题标签及短装饰点。不要强制覆盖其他栏目或用户指定主题。图文分组应依据语义，不按固定段落下标套用。
 
 college-account-card是用户提供的宣传部同篇成稿末尾完整名片，组件可设edge_aligned:true使边缘与正文同宽。不复制该稿编辑/审核姓名；名片二维码没有进行实时扫码确认。
+
+science-sections的group_border为#6ca1c3。group.variant=intro：1px细框、15px内边距、左上/右下20px圆角；section：1px直角细框和15px留白；summary：浅蓝底、1px细框、22px留白。外层10px不是框内留白，二者独立。窄屏表格应重新核对列宽；姓名与其后顿号保持在同一不可拆行片段。
