@@ -65,6 +65,8 @@
     "letter_spacing": 1,
     "heading": "section-label",
     "page_background": "#f5fbff",
-    "group_border": "#6ca1c3"
+    "group_border": "#6ca1c3",
+    "group_padding": 22,
+    "summary_padding": 26
   }
 }

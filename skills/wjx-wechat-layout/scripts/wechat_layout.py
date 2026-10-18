@@ -329,7 +329,8 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
             border=theme.get('group_border')
             if border:
                 if not re.fullmatch(r'#[0-9a-fA-F]{6}',border):raise ValueError('分区边框颜色须为六位色值')
-                padding=22 if variant=='summary' else 15
+                padding=int(theme.get('summary_padding',22) if variant=='summary' else theme.get('group_padding',15))
+                if not 0<=padding<=48:raise ValueError('框内留白须为0–48px')
                 rounding='border-top-left-radius:20px;border-bottom-right-radius:20px;' if variant=='intro' else ''
                 return f'<section data-layout-group="{html.escape(variant,quote=True)}" style="box-sizing:border-box;width:100%;margin:0 0 26px;padding:{padding}px;border:1px solid {border};{rounding}background:{bg};">{children}</section>'
             return f'<section style="box-sizing:border-box;width:100%;margin:0 0 26px;padding:18px 0 2px;background:{bg};">{children}</section>'

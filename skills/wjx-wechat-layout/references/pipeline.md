@@ -83,3 +83,5 @@ science-sections为可选科创分区主题：淡蓝底、白色内容组、统�
 college-account-card是用户提供的宣传部同篇成稿末尾完整名片，组件可设edge_aligned:true使边缘与正文同宽。不复制该稿编辑/审核姓名；名片二维码没有进行实时扫码确认。
 
 science-sections的group_border为#6ca1c3。group.variant=intro：1px细框、15px内边距、左上/右下20px圆角；section：1px直角细框和15px留白；summary：浅蓝底、1px细框、22px留白。外层10px不是框内留白，二者独立。窄屏表格应重新核对列宽；姓名与其后顿号保持在同一不可拆行片段。
+
+用户进一步反馈文字离框偏近，科创分区主题改用更宽留白试排：group_padding=22px、summary_padding=26px，覆盖此前15px/22px取值；参数可调整，待用户视觉反馈继续微调。正文外层10px不变，照片与正文共享框内宽度。
