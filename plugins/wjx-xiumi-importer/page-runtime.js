@@ -6,6 +6,8 @@
  * @param {{digest:string,modules:number,paperId:string|null,pageStyle:string,timeOrigin:number}|null} receipt
  */
 export async function applyBridgeInPage(packet, action, receipt = null) {
+  const diagnostic = { pluginVersion: "0.5.1", stage: "preflight", total: 0, uploaded: 0, current: null };
+  let ownsUpload = false;
   try {
     const fail = (message) => { throw new Error(message); };
     const visible = (element) => element.getBoundingClientRect().width > 0 && getComputedStyle(element).visibility !== "hidden";
@@ -157,23 +159,61 @@ export async function applyBridgeInPage(packet, action, receipt = null) {
         rewrites.push((mapping) => { let next = style; for (const item of found) next = next.replaceAll(item.match, `url("${(mapping.get(item.src) || item.src).replace(/"/g, "%22")}")`); element.setAttribute("style", next); });
       }
     }
-    const transfer = injector.get("wxArticleTransfer"); const images = injector.get("ossImageHandler");
+    const getOptional = (name) => { try { return injector.get(name); } catch { return null; } };
+    const transfer = getOptional("wxArticleTransfer"); const images = getOptional("ossImageHandler");
+    const imageAPI = getOptional("imageAPI");
     const embedded = [...sources].filter((src) => src.startsWith("data:"));
-    const isHosted = (src) => { try { const host = new URL(src).hostname; return /(^|\.)xiumi\.us$/.test(host) || /(^|\.)xiumius\.cn$/.test(host); } catch { return false; } };
+    const isHosted = (src) => { try { const url = new URL(src); const host = url.hostname; return ["https:","http:"].includes(url.protocol) && (/([.]|^)xiumi[.]us$/.test(host) || /([.]|^)xiumius[.]cn$/.test(host) || /([.]|^)xiumi[.]world$/.test(host)); } catch { return false; } };
     const external = [...sources].filter((src) => !src.startsWith("data:") && !src.startsWith("#") && !isHosted(src));
-    if ((embedded.length && typeof transfer.fetchBase64ImgsToStorage !== "function") || (external.length && typeof transfer.fetchAnyImgsToStorage !== "function") || typeof images.runtimeImageURI !== "function") fail("当前秀米版本不支持所需的素材上传，请先在秀米上传并绑定图片");
+    if ((embedded.length && ![imageAPI?.uploadImages,imageAPI?.uploadImageInBase64,transfer?.fetchBase64ImgsToStorage].some(fn=>typeof fn==="function")) || (external.length && typeof transfer?.fetchAnyImgsToStorage !== "function") || typeof images?.runtimeImageURI !== "function") fail("当前秀米版本不支持所需的素材上传，未更改正文");
+    if (window.__wjxUploadProgress?.running) fail("上一次导入仍在进行，请稍候再试，避免重复上传");
+    ownsUpload=true;diagnostic.total=embedded.length+external.length;diagnostic.stage="upload";
+    window.__wjxUploadProgress={running:true,completed:0,total:diagnostic.total,index:0,stage:"upload"};
     const mapping = new Map();
-    // Upload before touching article data. Xiumi's importer can return partial
-    // success, so every resource must have a real hosted address before commit.
-    for (const [list, method] of [[embedded, "fetchBase64ImgsToStorage"], [external, "fetchAnyImgsToStorage"]]) {
-      if (!list.length) continue;
-      const result = await transfer[method](list);
-      for (const src of list) {
-        const hosted = result?.[src] && new URL(images.runtimeImageURI(result[src]), location.href).href;
-        if (!hosted || !isHosted(hosted)) fail("部分图片上传失败，正文尚未写入。请检查素材后重试");
+    const describe = (error) => {
+      const data=error?.data||error?.response?.data;
+      const status=Number(error?.status||error?.response?.status)||null;
+      const code=typeof data?.code==="string"||typeof data?.code==="number"?String(data.code):"";
+      let message=error instanceof Error?error.message:typeof data==="string"?data:typeof data?.message==="string"?data.message:typeof data?.errmsg==="string"?data.errmsg:typeof data?.error==="string"?data.error:typeof error?.message==="string"?error.message:"秀米没有返回图片地址";
+      message=String(message).replace(/data:image\/[^\s"']+/gi,"[图片内容已省略]").replace(/[A-Za-z0-9+/=]{120,}/g,"[长数据已省略]").replace(/https?:\/\/[^\s"<>]+/g,"[地址已省略]").slice(0,220);
+      return {status,code,message};
+    };
+    // Use the same File upload service as the ordinary image picker. The bulk
+    // clipboard wrapper catches per-image errors and hides why uploads fail.
+    for (const [index,src] of [...embedded,...external].entries()) {
+      const meta=(packet.assets||[]).find(a=>a.src===src);
+      const mime=src.startsWith("data:")?src.slice(5,src.indexOf(";")):"remote";
+      diagnostic.current={index:index+1,assetId:meta?.id||`image-${index+1}`,mime,bytes:meta?.bytes||0,method:"",status:null,code:"",message:""};
+      window.__wjxUploadProgress.index=index+1;
+      try {
+        let raw;
+        if (src.startsWith("data:") && typeof imageAPI?.uploadImages==="function") {
+          diagnostic.current.method="imageAPI.uploadImages";
+          const base64=src.slice(src.indexOf(",")+1).replace(/\s/g,"");const bytes=Uint8Array.from(atob(base64),c=>c.charCodeAt(0));
+          const extension=mime==="image/jpeg"?"jpg":mime.split("/")[1];
+          const file=new File([bytes],`wjx-image-${index+1}.${extension}`,{type:mime});
+          const result=await imageAPI.uploadImages([file],null,null,null,{});
+          raw=result?.[0]?.target_uri||result?.target_uri||result?.data?.target_uri;
+        } else if (src.startsWith("data:") && typeof imageAPI?.uploadImageInBase64==="function") {
+          diagnostic.current.method="imageAPI.uploadImageInBase64";
+          const result=await imageAPI.uploadImageInBase64(src,`wjx-image-${index+1}.${mime==="image/jpeg"?"jpg":mime.split("/")[1]}`,null);
+          raw=result?.target_uri||result?.data?.target_uri;
+        } else {
+          const method=src.startsWith("data:")?"fetchBase64ImgsToStorage":"fetchAnyImgsToStorage";diagnostic.current.method=method;
+          const result=await transfer[method]([src]);raw=result?.[src];
+        }
+        if(typeof raw!=="string"||!raw)throw new Error("秀米未返回这张图片的地址，请检查登录状态、素材额度和上传提示");
+        const hosted=new URL(images.runtimeImageURI(raw),location.href).href;
+        if(!isHosted(hosted))throw new Error("上传返回了未识别的图片域名："+new URL(hosted).hostname);
         mapping.set(src, hosted);
+        diagnostic.uploaded++;window.__wjxUploadProgress.completed=diagnostic.uploaded;
+      } catch(error) {
+        Object.assign(diagnostic.current,describe(error));
+        const detail=diagnostic.current;
+        fail(`第 ${detail.index}/${diagnostic.total} 张图片上传失败（${detail.assetId}，${Math.ceil(detail.bytes/1024)}KB）${detail.status?`，HTTP ${detail.status}`:""}${detail.code?`，${detail.code}`:""}：${detail.message}。已完成 ${diagnostic.uploaded} 张，正文尚未写入。`);
       }
     }
+    diagnostic.stage="write";window.__wjxUploadProgress.stage="write";
     for (const rewrite of rewrites) rewrite(mapping);
     const comps = holders.flatMap((holder) => {
       const created = facility.createDefaultComp("paper", "text", { text: holder.innerHTML });
@@ -211,6 +251,7 @@ export async function applyBridgeInPage(packet, action, receipt = null) {
         throw error;
       }
     });
-    return { ok: true, message: `已写入 ${comps.length} 个独立模块，上传并绑定 ${mapping.size} 张图片。请在秀米保存并重新打开后核验。`, receipt: await signature() };
-  } catch (error) { return { ok: false, message: error instanceof Error ? error.message : "秀米导入未完成" }; }
+    diagnostic.stage="complete";window.__wjxUploadProgress.running=false;
+    return { ok: true, message: `已写入 ${comps.length} 个独立模块，上传并绑定 ${mapping.size} 张图片。请在秀米保存并重新打开后核验。`, receipt: await signature(), diagnostic };
+  } catch (error) { if(ownsUpload&&window.__wjxUploadProgress)window.__wjxUploadProgress.running=false;return { ok: false, message: error instanceof Error ? error.message : "秀米导入未完成", diagnostic }; }
 }
