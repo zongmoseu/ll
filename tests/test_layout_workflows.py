@@ -168,7 +168,9 @@ class LayoutWorkflows(unittest.TestCase):
         for folder in ['generic-row', 'wjx-row']:
             packet = brand.read_json(self.root / folder / 'article.xiumi.json')
             row = BeautifulSoup(packet['html'], 'html.parser').select_one('[data-image-layout="row"]')
-            self.assertEqual(len(row.select('td')), 3)
+            self.assertEqual(len(row.select('td:has(img)')), 3)
+            self.assertEqual(len(row.select('[data-image-gap]')), 2)
+            self.assertTrue(all('width:8px' in gap['style'] for gap in row.select('[data-image-gap]')))
             self.assertEqual(len(set(img['src'] for img in row.select('img'))), 3)
             self.assertEqual(packet['assetSummary']['embedded'], 3)
             self.assertEqual(packet['assetSummary']['local'], 0)

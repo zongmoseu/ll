@@ -372,11 +372,15 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
                 if not 2<=len(photos)<=3:raise ValueError('左右图组每行需2–3张独立图片，请按语义分行')
                 percent=float(b.get('width_percent',90))
                 if not 10<=percent<=100:raise ValueError('图组宽度百分比须在10–100之间')
+                gap=float(b.get('gap_px',8))
+                if not 0<=gap<=32:raise ValueError('图间距须为0–32px')
                 cells=[]
-                for photo in photos:
+                for index,photo in enumerate(photos):
                     img=image(photo['src'],photo.get('role','content'),photo.get('alt',''))
                     caption='<section style="margin-top:10px;font-size:12px;line-height:1.6;letter-spacing:1px;text-align:center;color:#858585;">'+html.escape(photo['caption'])+'</section>' if photo.get('caption') else ''
-                    cells.append(f'<td style="width:{100/len(photos):.6f}%;padding:0;border:0;vertical-align:top;">{img}{caption}</td>')
+                    if index and gap:
+                        cells.append(f'<td data-image-gap="true" aria-hidden="true" style="width:{gap:g}px;padding:0;border:0;font-size:0;line-height:0;"></td>')
+                    cells.append(f'<td style="padding:0;border:0;vertical-align:top;">{img}{caption}</td>')
                 return f'<table data-image-layout="row" cellpadding="0" cellspacing="0" style="border:0;border-collapse:collapse;border-spacing:0;table-layout:fixed;width:{percent:g}%;margin:16px auto;padding:0;"><tbody><tr>'+''.join(cells)+'</tr></tbody></table>'
             # Other layouts keep each source image independent.
             if b.get('mode','stack')=='scroll':
