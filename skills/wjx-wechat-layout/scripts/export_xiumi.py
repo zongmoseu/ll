@@ -2,12 +2,28 @@
 from pathlib import Path
 from copy import deepcopy
 from urllib.parse import urlparse,unquote
-import argparse,base64,hashlib,json,mimetypes,re
+import argparse,base64,hashlib,json,mimetypes,re,io
 from datetime import datetime,timezone
 from bs4 import BeautifulSoup,Tag
+from PIL import Image,UnidentifiedImageError
 
 PAGE_KEYS={'font-family','font-size','line-height','letter-spacing','color','text-align','text-indent','padding-top','padding-right','padding-bottom','padding-left','background-color','background-image','background-size','background-position','background-repeat'}
 IMAGE_TYPES={'image/png','image/jpeg','image/gif','image/webp','image/avif'}
+
+def normalize_image(data):
+    """The extension's File MIME must match bytes, not a misleading filename."""
+    try:
+        with Image.open(io.BytesIO(data)) as image:
+            actual=image.format
+            if actual in ('PNG','JPEG','GIF'):
+                image.verify()
+                return data,{'PNG':'image/png','JPEG':'image/jpeg','GIF':'image/gif'}[actual]
+            if actual not in ('WEBP','AVIF'):raise ValueError('该图片格式不能直接导入秀米，请转为PNG或JPEG')
+            if getattr(image,'is_animated',False):raise ValueError('动态WebP/AVIF请先转换为GIF，不能只保留第一帧')
+            output=io.BytesIO();image.convert('RGBA').save(output,format='PNG')
+            return output.getvalue(),'image/png'
+    except (UnidentifiedImageError,OSError) as e:
+        raise ValueError('图片数据无法识别或已损坏') from e
 
 def declarations(raw):
     result={};start=0;quote=None;depth=0
@@ -51,7 +67,9 @@ def build_packet(html_path,checks_path=None,source_html=None):
             if not file.is_relative_to(folder) or not file.is_file():raise ValueError('配图应位于导出目录内：'+src)
             mime=mimetypes.guess_type(file.name)[0]
             if mime not in IMAGE_TYPES:raise ValueError('请将图片转为PNG/JPEG后导出：'+file.name)
-            data=file.read_bytes();value='data:'+mime+';base64,'+base64.b64encode(data).decode()
+            data=file.read_bytes()
+        data,mime=normalize_image(data)
+        value='data:'+mime+';base64,'+base64.b64encode(data).decode()
         asset={'id':f'asset-{len(assets)+1}','src':value,'kind':kind,'occurrences':1,'status':'embedded','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
         assets.append(asset);by_source[src]=asset;local_map[src]=asset['id'];return 'opslion-asset://'+asset['id']
     for el in [root,*root.find_all(True)]:

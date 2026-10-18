@@ -35,7 +35,7 @@ description: AI读取Word图文稿与可选图片包，按东南大学吴健雄�
 
 ## AI执行流程
 
-使用[结构稿说明](references/pipeline.md)。脚本相对本技能目录运行，依赖python-docx、beautifulsoup4，不要求用户装Node或启动工作台。
+使用[结构稿说明](references/pipeline.md)。脚本相对本技能目录运行，依赖python-docx、beautifulsoup4、Pillow，不要求用户装Node或启动工作台。
 
 ```text
 python scripts/wechat_layout.py extract 稿件.docx --out 工作目录/article.json

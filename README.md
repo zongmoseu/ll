@@ -18,7 +18,7 @@
 
 ## 安装
 
-技能：将`skills/wjx-wechat-layout`安装到助手技能目录。依赖为Python、python-docx、beautifulsoup4。
+技能：将`skills/wjx-wechat-layout`安装到助手技能目录。依赖为Python、python-docx、beautifulsoup4、Pillow。图片打包会校验实际格式，避免文件后缀与数据类型不一致。
 
 插件：下载本仓库，在浏览器扩展管理页开启开发者模式，加载`plugins/wjx-xiumi-importer`文件夹。只需安装一次。
 
