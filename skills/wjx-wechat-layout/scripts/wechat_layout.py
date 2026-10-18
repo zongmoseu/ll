@@ -408,7 +408,7 @@ def render(article_path, output, theme_name=None, image_map=None, include_title=
         if typ=='intro':return f'<section style="padding:18px 16px;margin:16px 0 24px;background:{light};border-radius:3px;text-align:justify;">{text}</section>'
         if typ=='quote':return f'<section style="padding:12px 16px;margin:18px 0;border-left:3px solid {primary};background:{light};">{text}</section>'
         if typ=='caption':return '<p style="margin:6px 0 18px;font-size:12px;color:#858585;text-align:center;">'+text+'</p>'
-        if typ=='credit':return '<p style="margin:0;padding:5px 0;background:#ffffff;text-align:center;font-size:12px;color:#858585;">'+text+'</p>'
+        if typ=='credit':return '<p style="margin:0;padding:5px 0;background:transparent;text-align:center;font-size:12px;color:#858585;">'+text+'</p>'
         if typ=='list_item':
             marker=html.escape(str(b.get('marker','•')))
             level=max(0,min(5,int(b.get('level',0))))
